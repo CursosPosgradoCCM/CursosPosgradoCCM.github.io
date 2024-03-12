@@ -1,3 +1,3 @@
-# Base_
+# Soluciones a los Ejercicios
 
-Templeate basic websites projects
+[Python]
