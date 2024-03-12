@@ -1,7 +1,7 @@
 layout: page
 title: "Ejercicios de Python"
-permalink: https://CursosPosgradoCCM.github.io/Ejercicios_Curso_CC/Python
-----
+permalink: https://cursosposgradoccm.github.io/Python
+
 
 # Tipos de datos
 
