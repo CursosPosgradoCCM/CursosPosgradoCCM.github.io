@@ -1,3 +1,3 @@
 # Soluciones a los Ejercicios
 
-[Python](https://CursosPosgradoCCM.github.io/Ejercicios_Curso_CC/Python/README.md)
+[Python](https://cursosposgradoccm.github.io/Python/README.md)
