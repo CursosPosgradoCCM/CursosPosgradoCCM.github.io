@@ -45,4 +45,12 @@ Resultado
 
 **Soluciones:**
 
-- Solución 2: 
+- Solución 1(Atenea): 
+
+```python
+lista = ['a','b','c','d','e','f','g','h','i']
+sublista_1,sublista_3 = lista[::3],lista[2::3]
+lista[::3] = sublista_3
+lista[2::3] = sublista_1
+lista
+``` 
