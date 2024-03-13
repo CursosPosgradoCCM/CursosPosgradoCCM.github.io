@@ -8,7 +8,21 @@
 
 **Soluciones:**
 
-- Solución 1: 
+- Solución 1: explicación
+
+Escribir código
+
+```python
+lista = [1, 2, 3, 4, 5]
+```
+
+Escribir resultado
+
+```output
+[2,1,4,3,5]
+```
+
+- Solución 2: 
 
 **Ejercicio 2:** Dada una lista de letras, invierte el orden de los elementos en grupos de tres. Por ejemplo, si la lista es [‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’], el resultado sería [‘c’, ‘b’, ‘a’, ‘f’, ‘e’, ‘d’, ‘i’, ‘h’, ‘g’].
 
