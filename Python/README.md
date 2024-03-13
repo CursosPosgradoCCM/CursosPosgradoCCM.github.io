@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Ejercicios de Python"
 permalink: https://cursosposgradoccm.github.io/Python
 ---
