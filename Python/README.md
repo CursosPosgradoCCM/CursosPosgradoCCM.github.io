@@ -27,18 +27,20 @@ Escribir resultado
 - Solución Francisco Esp:
 
 ```python
-numeros=[1,2,3,4,5,6,7,8,9]
-pos_par=numeros[:-1:2]
-pos_impar=numeros[1::2]
-numeros[:-1:2]=pos_impar
-numeros[1::2]=pos_par
+numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+#Se cambian guardan los elementos que están en las posiciones pares o impares
+pos_par = numeros[:-1:2]
+pos_impar = numeros[1::2]
+#Se cambian los elementos en posiciones pares por los elementos en las posiciones impares y vicesversa
+numeros[:-1:2] = pos_impar
+numeros[1::2] = pos_par
 numeros
 ```
 
 Resultado
 
 ```output
-[2, 1, 4, 3, 6, 5, 8, 7, 9]
+[1, 0, 3, 2, 5, 4, 7, 6, 8]
 ```
 
 **Ejercicio 2:** Dada una lista de letras, invierte el orden de los elementos en grupos de tres. Por ejemplo, si la lista es `[‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’]`, el resultado sería `[‘c’, ‘b’, ‘a’, ‘f’, ‘e’, ‘d’, ‘i’, ‘h’, ‘g’]`.
