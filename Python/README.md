@@ -24,6 +24,23 @@ Escribir resultado
 
 - Solución 2: 
 
+- Solución Francisco Esp:
+
+```python
+numeros=[1,2,3,4,5,6,7,8,9]
+pos_par=numeros[:-1:2]
+pos_impar=numeros[1::2]
+numeros[:-1:2]=pos_impar
+numeros[1::2]=pos_par
+numeros
+```
+
+Resultado
+
+```output
+[2, 1, 4, 3, 6, 5, 8, 7, 9]
+```
+
 **Ejercicio 2:** Dada una lista de letras, invierte el orden de los elementos en grupos de tres. Por ejemplo, si la lista es `[‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’]`, el resultado sería `[‘c’, ‘b’, ‘a’, ‘f’, ‘e’, ‘d’, ‘i’, ‘h’, ‘g’]`.
 
 **Soluciones:**
