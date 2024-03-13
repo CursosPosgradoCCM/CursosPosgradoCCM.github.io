@@ -62,3 +62,15 @@ lista[::3] = sublista_3
 lista[2::3] = sublista_1
 lista
 ``` 
+
+- Solución Frnacisco Santiago:
+
+```python
+lista=["a","b","c","d","e","f","g","h","i"]
+nueva_lista=lista[0:3][::-1] +lista[3:6][::-1]+lista[6:9][::-1]
+print(nueva_lista)
+``` 
+
+```output
+['c', 'b', 'a', 'f', 'e', 'd', 'i', 'h', 'g']
+```
