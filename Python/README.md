@@ -10,13 +10,12 @@
 
 - Solución 1: explicación
 
-Solucion 1 Luis
-numeros=[1,2,3,4,5,6]
-par=numeros[:-1:2]
-impar=numeros[1::2]
-numeros[:-1:2]=impar
-numeros[1::2]=par
-numeros
+lista_1=[1,2,3,4,5,6]
+par=lista_1[:-1:2] 
+impar=lista_1[1::2]
+lista_1[:-1:2]=impar
+lista_1[1::2]=par
+lista_1
 
 
 ```python
