@@ -1,4 +1,4 @@
-# Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos
+# Temas Selectos de Análisis Numérico y Computación Científica: Cómputo científico para el análisis de datos
 
 Página del curso: [link](https://haydeeperuyero.github.io/Computo_Cientifico/)
 
