@@ -1,12 +1,8 @@
----
-layout: default
-title: "Ejercicios de Python"
-permalink: https://cursosposgradoccm.github.io/Python
----
+# Ejercicios de Python
 
-# Tipos de datos
+## Tipos de datos
 
-## Listas
+### Listas
 
 **Ejercicio 1:** Dada una lista de números, intercambia cada par de elementos adyacentes. Por ejemplo, si la lista es [1, 2, 3, 4, 5], el resultado sería [2, 1, 4, 3, 5].
 
