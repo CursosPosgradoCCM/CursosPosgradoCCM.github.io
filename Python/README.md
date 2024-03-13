@@ -10,7 +10,14 @@
 
 - Solución 1: explicación
 
-Escribir código
+Solucion 1 Luis
+numeros=[1,2,3,4,5,6]
+par=numeros[:-1:2]
+impar=numeros[1::2]
+numeros[:-1:2]=impar
+numeros[1::2]=par
+numeros
+
 
 ```python
 lista = [1, 2, 3, 4, 5]
