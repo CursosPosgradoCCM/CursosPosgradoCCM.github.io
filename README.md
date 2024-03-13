@@ -6,4 +6,4 @@ En esta página encontraran las soluciones por los alumnos a los ejercicios del 
 
 # Soluciones a los Ejercicios
 
-[Python](https://cursosposgradoccm.github.io/Python/README.md)
+[Python](https://cursosposgradoccm.github.io/Python)
