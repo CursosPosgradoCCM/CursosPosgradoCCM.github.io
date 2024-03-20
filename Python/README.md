@@ -10,12 +10,15 @@
 
 - Solución 1: explicación
 
+```python
 lista_1=[1,2,3,4,5,6]
 par=lista_1[:-1:2] 
 impar=lista_1[1::2]
 lista_1[:-1:2]=impar
 lista_1[1::2]=par
 lista_1
+```
+
 
 
 ```python
