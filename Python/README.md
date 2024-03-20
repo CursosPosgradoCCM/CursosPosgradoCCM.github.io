@@ -8,17 +8,16 @@
 
 **Soluciones:**
 
-- Solución 1: explicación
+- Solución 1: explicación Luis
 
 ```python
 lista_1=[1,2,3,4,5,6]
-par=lista_1[:-1:2] 
+par=lista_1[:-1:2]
 impar=lista_1[1::2]
 lista_1[:-1:2]=impar
 lista_1[1::2]=par
 lista_1
 ```
-
 
 
 ```python
@@ -31,7 +30,7 @@ Escribir resultado
 [2,1,4,3,5]
 ```
 
-- Solución 2: 
+- Solución 2:
 
 - Solución Francisco Esp:
 
@@ -56,7 +55,8 @@ Resultado
 
 **Soluciones:**
 
-- Solución 1(Atenea): 
+ 
+- Solución 1(Atenea):
 
 ```python
 lista = ['a','b','c','d','e','f','g','h','i']
@@ -66,13 +66,18 @@ lista[2::3] = sublista_1
 lista
 ``` 
 
+```
+
 - Solución Frnacisco Santiago:
 
 ```python
 lista=["a","b","c","d","e","f","g","h","i"]
 nueva_lista=lista[0:3][::-1] +lista[3:6][::-1]+lista[6:9][::-1]
 print(nueva_lista)
+
 ``` 
+
+```
 
 ```output
 ['c', 'b', 'a', 'f', 'e', 'd', 'i', 'h', 'g']
@@ -80,7 +85,8 @@ print(nueva_lista)
 
 ## Diciconarios
 
-**Ejercicio 1:** 
+**Ejercicio 1:**
+
 1) Crea una lista que contenga los nombres de tres amigos tuyos.
 
 2) Crea un diccionario que represente la información de un libro (título, autor, año de publicación).
@@ -102,6 +108,58 @@ suma = 1+3
 #4
 print("cadena 1" + " cadena2")
 ```
+
+
+Luis:
+```python
+
+# 1) Crear una lista que contenga los nombres de tres amigos tuyos.
+amigos = ["Mariel", "Francisco", "Karina"]
+
+# 2) Crear un diccionario que represente la información de un libro (título, autor, año de publicación).
+libro = {
+    "título": "La biblia de los caídos",
+    "autor": "Fernando Trujillo Sanz",
+    "año_publicación": 2010
+}
+
+# 3) Realizar la suma de dos números y guardar el resultado en una variable.
+num1 = 10
+num2 = 5
+resultado_suma = num1 + num2
+
+# 4) Concatenar dos cadenas de caracteres y mostrar el resultado.
+cadena1 = "Hola, "
+cadena2 = "¿cómo estás?"
+resultado_concatenacion = cadena1 + cadena2
+
+# Mostrar resultados
+print("Ejercicio 1:")
+print("Lista de amigos:", amigos)
+print("\nEjercicio 2:")
+print("Información del libro:", libro)
+print("\nEjercicio 3:")
+print("Resultado de la suma:", resultado_suma)
+print("\nEjercicio 4:")
+print("Resultado de la concatenación:", resultado_concatenacion)
+
+```
+
+```output
+Ejercicio 1:
+Lista de amigos: ['Mariel', 'Francisco', 'Karina']
+
+Ejercicio 2:
+Información del libro: {'título': 'La biblia de los caídos', 'autor': 'Fernando Trujillo Sanz', 'año_publicación': 2010}
+
+Ejercicio 3:
+Resultado de la suma: 15
+
+Ejercicio 4:
+Resultado de la concatenación: Hola, ¿cómo estás?
+
+```
+
 
 ## Flujo de Control
 
@@ -172,3 +230,5 @@ for i in range(1500,2701):
 ```output
 1505
 ```
+
+
