@@ -187,6 +187,23 @@ es 0
 **Ejercicio 2**
 Crea un programa que determine si un número es par o impar.
 
+Luis: 
+
+```python
+numero = 5
+
+if numero % 2 == 0:
+    print("El número es par.")
+else:
+    print("El número es impar.")
+    
+    #subir ejercicio
+```
+
+```output
+El número es impar.
+```
+
 
 ##Bucles
 
@@ -213,6 +230,25 @@ while i<10:
 9
 10
 ```
+**Ejercicio 2: **
+Crea un programa que calcule la suma de los números del 1 al 100 utilizando un bucle for.
+**Soluciones**
+
+Luis:
+```python
+suma = 0
+
+for numero in range(1, 101):
+    suma += numero
+
+print("La suma de los números del 1 al 100 es:", suma)
+
+```
+
+```output
+La suma de los números del 1 al 100 es: 5050
+```
+
 ## Interrupción
 
 **Ejercicio 1:**
@@ -231,4 +267,51 @@ for i in range(1500,2701):
 1505
 ```
 
+Luis: 
+```python
+for numero in range(1500, 2701):
+    if numero % 7 == 0 and numero % 5 == 0:
+        print(numero)
+        break
+```
 
+
+```output
+1505
+```
+
+## Iteraciones sobre secuencias
+
+**Ejercicio 1 **
+Escribe un programa que escriba las letras de la frase por separado
+
+**Soluciones **
+
+Luis:
+
+```python
+mensaje = "Python es genial"
+
+for indice, letra in enumerate(mensaje):
+    print(f'Índice: {indice}, Letra: {letra}')
+```
+
+
+```output
+Índice: 0, Letra: P
+Índice: 1, Letra: y
+Índice: 2, Letra: t
+Índice: 3, Letra: h
+Índice: 4, Letra: o
+Índice: 5, Letra: n
+Índice: 6, Letra:  
+Índice: 7, Letra: e
+Índice: 8, Letra: s
+Índice: 9, Letra:  
+Índice: 10, Letra: g
+Índice: 11, Letra: e
+Índice: 12, Letra: n
+Índice: 13, Letra: i
+Índice: 14, Letra: a
+Índice: 15, Letra: l
+```
