@@ -205,7 +205,7 @@ El número es impar.
 ```
 
 
-##Bucles
+## Bucles
 
 **Ejercicio 1:**
 Escribe un programa que muestre los números del 1 al 10 utilizando un bucle while.
@@ -283,7 +283,7 @@ for numero in range(1500, 2701):
 ## Iteraciones sobre secuencias
 
 **Ejercicio 1 **
-Escribe un programa que escriba las letras de la frase por separado
+Escribe un programa que escriba las letras de la frase "Python es genial" por separado
 
 **Soluciones **
 
@@ -314,4 +314,29 @@ for indice, letra in enumerate(mensaje):
 Índice: 13, Letra: i
 Índice: 14, Letra: a
 Índice: 15, Letra: l
+```
+
+Francisco Santiago:
+```python
+mensaje ="Python es genial"
+caracter = enumerate(mensaje)
+for i, letra in caracter:
+    if letra !=" ":
+        print(letra)
+```
+```output
+P
+y
+t
+h
+o
+n
+e
+s
+g
+e
+n
+i
+a
+l
 ```
