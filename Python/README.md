@@ -127,7 +127,7 @@ es 0
 Crea un programa que determine si un número es par o impar.
 
 
-##Bucles
+## Bucles
 
 **Ejercicio 1:**
 Escribe un programa que muestre los números del 1 al 10 utilizando un bucle while.
@@ -168,4 +168,36 @@ for i in range(1500,2701):
 ```
 ```output
 1505
+```
+
+## iteración sobre secuencias
+
+**Ejercicio 1:**
+Escribe un programa que imprima cada letra de la cadena "Python es genial".
+
+**Soluciones**
+
+Francisco Santiago:
+```python
+mensaje ="Python es genial"
+caracter = enumerate(mensaje)
+for i, letra in caracter:
+    if letra !=" ":
+        print(letra)
+```
+```output
+P
+y
+t
+h
+o
+n
+e
+s
+g
+e
+n
+i
+a
+l
 ```
