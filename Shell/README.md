@@ -338,7 +338,7 @@ Espacio Resultado
 ```
 
 **Ejercicio 7** Supongamos que queremos previsualizar los comandos que el siguiente ciclo va a realizar en lugar de correrlo primero para asegurarnos de que está haciendo lo que queremos.
-
+	
 
 ```python
 $ for filename in *.pdb
@@ -556,13 +556,101 @@ $ bash -x do-errors.sh NENE*A.txt NENE*B.txt
 
 ## 2.6  Buscando y encontrando cosas
 
+**Ejercicio 1**  ¿Cómo obtendrían solo lo siguiente del archivo haiku.txt?
+
+```python
+and the presence of absence.
+```
+```python
+Respuesta
+```
+
+Escribir resultado
+
+```output
+Espacio Resultado
+```
 
 
+**Ejercicio 2** El archivo que se encuentra en la carpeta animal-counts/animals.csv contiene una lista de animales, con su fecha de observación y cuantos animales se observaron.
+
+```python
+2012-11-05,deer,5
+2012-11-05,rabbit,22
+2012-11-05,raccoon,7
+2012-11-06,rabbit,19
+2012-11-06,deer,2
+2012-11-06,fox,4
+2012-11-07,rabbit,16
+2012-11-07,bear,1
+```
+Supongamos que queremos crear un script que tome como primer argumento la especie del animal y como segundo argumento el directorio. El script nos debe regresar un archivo llamado <especie>.txt que contenga una lista de fechas y el número de veces que se observo esa especie. Por ejemplo, rabbit.txt tendría que contener la siguiente información:
 
 
+```python
+Usa las opciones de ayuda de los comandos cut y grep (puedes usar man grep o man cut también para pedir ayuda de esos comandos, la palabra man se refiere a manual.)
+```
+```python
+Respuesta
+```
+
+Escribir resultado
+
+```output
+Espacio Resultado
+```
 
 
+**Ejercicio 3** En la carpeta exercise-data/writing se encuentra el texto completo de Mujercitas LittleWomen.txt. Usando un for encuentra que hermana aparece más veces: Jo, Meg, Beth, Amy.
 
+```python
+Respuesta
+```
+
+Escribir resultado
+
+```output
+Espacio Resultado
+```
+
+**Ejercicio 4**  ¿Cómo podrías mostrar en color lo que estás buscando? Explora la ayuda de grep
+
+```python
+Respuesta
+```
+
+Escribir resultado
+
+```output
+Espacio Resultado
+```
+
+**Ejercicio 5**   La opción -v en grep busca todo lo que no concuerde con el patrón indicado. En la carpeta creatures, ¿cómo listarías todos los archivos que terminen en .dat menos el que se llama unicorn? 
+
+```python
+Respuesta
+```
+
+Escribir resultado
+
+```output
+Espacio Resultado
+```
+## 2.7 if, while y for
+
+**Ejercicio 1** Crea un case statement para adivinar tu edad. Debes pedirle al usuario que introduzca el número correspondiente a tu edad y que los casos o patrones obtengan por resultado una frase referente a si adivinaron o no su edad. Realiza lo mismo con un if.
+
+```python
+Respuesta
+```
+
+Escribir resultado
+
+```output
+Espacio Resultado
+```
+
+ 
 
 
 
