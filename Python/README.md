@@ -282,10 +282,10 @@ for numero in range(1500, 2701):
 
 ## Iteraciones sobre secuencias
 
-** Ejercicio 1 **
+**Ejercicio 1**
 Escribe un programa que escriba las letras de la frase "Python es genial" por separado
 
-** Soluciones **
+**Soluciones**
 
 Luis:
 
@@ -343,11 +343,11 @@ l
 ###  Compresiones de listas
 
 
-** Ejercicios ** 
+**Ejercicios** 
 
 Ejercicio 1: Dada una lista de números, crea una lista que contenga los cuadrados de los números pares presentes en la lista dada.
 
-** Soluciones **
+**Soluciones**
 
 Luis
 
@@ -406,7 +406,7 @@ print(numeros_primos)
 ##  Numpy 
 ### Operaciones Básicas con NumPy
 
-** Ejercicio 1 ** Crea un array unidimensional con los números del 1 al 10 e imprímelo.
+**Ejercicio 1** Crea un array unidimensional con los números del 1 al 10 e imprímelo.
 
 Luis
 
@@ -419,7 +419,7 @@ print(array)
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-** Ejercicio 2 ** Crea una matriz 3x3 con todos los elementos iguales a 5 e imprímela.
+**Ejercicio 2** Crea una matriz 3x3 con todos los elementos iguales a 5 e imprímela.
 
 Luis
 
@@ -434,13 +434,13 @@ print(matriz)
  [5 5 5]]
 ```
 
-** Ejercicio 3 ** Calcula la suma de los elementos de la siguiente matriz:
+**Ejercicio 3** Calcula la suma de los elementos de la siguiente matriz:
 ```python
 matriz = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 ```
 
-** Soluciones **
+**Soluciones**
 Luis 
 
 ```python
@@ -455,7 +455,7 @@ print(suma_elementos)
 
 ### Indexación y Rebanado
 
-** Ejercicio 1 ** Considera es siguiente array, extrae usando este tipo de indexado las letras O,M,G y W, O, Z. 
+**Ejercicio 1** Considera es siguiente array, extrae usando este tipo de indexado las letras O,M,G y W, O, Z. 
 
 ```python
 np.array(list("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234")).reshape(5,6)
@@ -482,13 +482,10 @@ print(letras_extraidas)
 ```
 
 ```output
-array = np.array(list("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234")).reshape(5,6)
-
-letras_extraidas = array[[2, 2, 1, 3, 2, 4], [2, 0, 0, 4, 2, 1]]
-print(letras_extraidas)
+['O' 'M' 'G' 'W' 'O' 'Z']
 ```
 
-** Ejercicio 2 ** Considerea el siguiente array y extrae el array [ 5, 6, 7, 8, 9, 10, 11] usando una máscara boleana:
+**Ejercicio 2** Considerea el siguiente array y extrae el array [ 5, 6, 7, 8, 9, 10, 11] usando una máscara boleana:
 ```python
 
 np.arange(12).reshape(4,3)
@@ -501,7 +498,7 @@ np.arange(12).reshape(4,3)
 ##        [ 9, 10, 11]])
 ```
 
-** Soluciones **
+**Soluciones**
 
 ```python
 
@@ -513,7 +510,7 @@ np.arange(12).reshape(4,3)
 
 ### Ordenamiento
 
-** Ejercicio 1 **   Para el array a=np.ones((5,5,5)), responde lo siguiente para cada caso:
+**Ejercicio 1**   Para el array a=np.ones((5,5,5)), responde lo siguiente para cada caso:
 * ¿Cuál es su dimensión?
 
 * ¿Es una vista o una copia?
