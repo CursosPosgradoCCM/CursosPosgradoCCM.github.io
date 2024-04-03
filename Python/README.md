@@ -282,10 +282,10 @@ for numero in range(1500, 2701):
 
 ## Iteraciones sobre secuencias
 
-**Ejercicio 1 **
+** Ejercicio 1 **
 Escribe un programa que escriba las letras de la frase "Python es genial" por separado
 
-**Soluciones **
+** Soluciones **
 
 Luis:
 
@@ -340,3 +340,191 @@ i
 a
 l
 ```
+###  Compresiones de listas
+
+
+** Ejercicios ** 
+
+Ejercicio 1: Dada una lista de números, crea una lista que contenga los cuadrados de los números pares presentes en la lista dada.
+
+** Soluciones **
+
+Luis
+
+```python
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+cuadrados_numeros_pares = [x ** 2 for x in numeros if x % 2 == 0]
+print(cuadrados_numeros_pares)
+        
+
+```
+```output
+[4, 16, 36, 64, 100]
+```
+
+Ejercicio 2: Dada una lista de cadenas, crea una nueva lista que contenga todas las cadenas convertidas a mayúsculas. Por ejemplo, si tienes la lista siguiente:
+
+```python
+
+palabras = ['hola', 'python', 'mundo', 'programación']
+```
+Lo que quieres obtener es:
+
+```python
+
+['HOLA', 'PYTHON', 'MUNDO', 'PROGRAMACIÓN']
+```
+Luis:
+
+```python
+cadenas = ['hola', 'python', 'mundo', 'programación']
+cadenas_mayusculas = [cadena.upper() for cadena in cadenas]
+print(cadenas_mayusculas)
+
+
+```
+```output
+
+['HOLA', 'PYTHON', 'MUNDO', 'PROGRAMACIÓN']
+```
+
+Ejercicio 3: Dada una lista de números enteros, crea una lista que contenga solo los números primos de la lista dada, sin definir una función adicional.
+
+Luis: 
+
+```python
+numeros_enteros = [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+numeros_primos = [numero for numero in numeros_enteros if numero > 1 and all(numero % i != 0 for i in range(2, int(numero**0.5) + 1))]
+
+print(numeros_primos)
+
+```
+```output
+[2, 3, 5, 7, 11, 13]
+```
+
+##  Numpy 
+### Operaciones Básicas con NumPy
+
+** Ejercicio 1 ** Crea un array unidimensional con los números del 1 al 10 e imprímelo.
+
+Luis
+
+```python
+array = list(range(1, 11))
+print(array)
+
+```
+```output
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+** Ejercicio 2 ** Crea una matriz 3x3 con todos los elementos iguales a 5 e imprímela.
+
+Luis
+
+```python
+matriz = np.full((3, 3), 5)
+print(matriz)
+
+```
+```output
+[[5 5 5]
+ [5 5 5]
+ [5 5 5]]
+```
+
+** Ejercicio 3 ** Calcula la suma de los elementos de la siguiente matriz:
+```python
+matriz = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+```
+
+** Soluciones **
+Luis 
+
+```python
+matriz = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+suma_elementos = np.sum(matriz)
+print(suma_elementos) 
+
+```
+```output
+45
+```
+
+### Indexación y Rebanado
+
+** Ejercicio 1 ** Considera es siguiente array, extrae usando este tipo de indexado las letras O,M,G y W, O, Z. 
+
+```python
+np.array(list("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234")).reshape(5,6)
+
+```
+```output
+array([['A', 'B', 'C', 'D', 'E', 'F'],
+       ['G', 'H', 'I', 'J', 'K', 'L'],
+       ['M', 'N', 'O', 'P', 'Q', 'R'],
+       ['S', 'T', 'U', 'V', 'W', 'X'],
+       ['Y', 'Z', '1', '2', '3', '4']], dtype='<U1')
+```
+
+** Soluciones **
+
+Luis
+
+```python
+array = np.array(list("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234")).reshape(5,6)
+
+letras_extraidas = array[[2, 2, 1, 3, 2, 4], [2, 0, 0, 4, 2, 1]]
+print(letras_extraidas)
+
+```
+
+```output
+array = np.array(list("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234")).reshape(5,6)
+
+letras_extraidas = array[[2, 2, 1, 3, 2, 4], [2, 0, 0, 4, 2, 1]]
+print(letras_extraidas)
+```
+
+** Ejercicio 2 ** Considerea el siguiente array y extrae el array [ 5, 6, 7, 8, 9, 10, 11] usando una máscara boleana:
+```python
+
+np.arange(12).reshape(4,3)
+```
+
+```output
+## array([[ 0,  1,  2],
+##        [ 3,  4,  5],
+##        [ 6,  7,  8],
+##        [ 9, 10, 11]])
+```
+
+** Soluciones **
+
+```python
+
+
+```
+```output
+
+```
+
+### Ordenamiento
+
+** Ejercicio 1 **   Para el array a=np.ones((5,5,5)), responde lo siguiente para cada caso:
+* ¿Cuál es su dimensión?
+
+* ¿Es una vista o una copia?
+
+Después verifica tu respuesta.
+
+v = a[1, ::2, ::2]
+
+v = a[2,:]
+
+v = a[[0, 1],:]
+
+v = a[[2,3], [2,3]]
+>>>>>>> Luis
