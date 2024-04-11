@@ -524,4 +524,432 @@ v = a[2,:]
 v = a[[0, 1],:]
 
 v = a[[2,3], [2,3]]
+
+
+**Soluciones**
+
+```python
+import numpy as np
+
+a = np.ones((5,5,5))
+
+v1 = a[1, ::2, ::2]
+v2 = a[2,:]
+v3 = a[[0, 1],:]
+v4 = a[[2,3], [2,3]]
+
+print("Dimensiones de v1:", v1.ndim)
+print("Es vista:", v1.base is a)
+print("Dimensiones de v2:", v2.ndim)
+print("Es vista:", v2.base is a)
+print("Dimensiones de v3:", v3.ndim)
+print("Es vista:", v3.base is a)
+print("Dimensiones de v4:", v4.ndim)
+print("Es copia:", v4.base is None)
+
+```
+
+```output
+Dimensiones de v1: 2
+Es vista: True
+Dimensiones de v2: 2
+Es vista: True
+Dimensiones de v3: 3
+Es vista: False
+Dimensiones de v4: 2
+Es copia: True
+```
+**Ejercicio 2** Ejercicio 2: Recrea los siguientes plots usando lo siguiente:
+
+Realiza un array de solo ceros que será tu base.
+
+Cambia los valores correspondientes a 1.
+
+Usa plt.matshow(nombre_array) para hacer el plot.
+
+Para importar el paquete para hacer el plot realiza lo siguiente: 
+
+```python
+
+%matplotlib inline
+from matplotlib import pyplot as plt #libreria para hacer plots
+```
+
+**Soluciones**
+
+Luis 4
+```python
+tablero = np.zeros((11, 11))
+tablero[::2, ::2] = 1
+tablero[1::2, 1::2] = 1
+tablero_invertido = 1 - tablero
+plt.matshow(tablero_invertido)  
+plt.show()
+
+```
+```output
+#Pendiente imagen 78
+```
+
+**Ejercicio 3:** Comienza creando un  array 3x3:
+
+```{python}
+ej = np.array([[6,2,3], [1,7,2], [7,6,5]])
+ej
+```
+
+a) Ordena la última fila en forma ascenderte de manera `in-place`.
+
+b) Ahora, ordena la primera y segunda columna (ascendentemente) de dos formas distintas:
+
+  - Usando fancy-index
+  
+  - `in-place`, usando rebanadas o índices.
+
+**Soluciones**
+
+Luis:
+
+```python
+ej = np.array([[6,2,3], [1,7,2], [7,6,5]])
+
+# Ordenar la última fila en orden ascendente
+ej[-1].sort()
+
+print(ej)
+
+import numpy as np
+
+ej1 = np.array([[6, 2, 3], [1, 7, 2], [7, 6, 5]])
+
+# fancy-indexing
+sorted_indices_col1 = np.argsort(ej1[:, 0])
+sorted_indices_col2 = np.argsort(ej1[:, 1])
+
+ej1[:, 0] = ej1[sorted_indices_col1, 0]
+ej1[:, 1] = ej1[sorted_indices_col2, 1]
+# in-place
+print(ej1)
+
+ej2 = np.array([[6, 2, 3], [1, 7, 2], [7, 6, 5]])
+ej2[:, 0].sort()
+ej2[:, 1].sort()
+
+print(ej2)
+
+
+```
+```output
+[[6 2 3]
+ [1 7 2]
+ [5 6 7]]
+
+[[1 2 3]
+ [6 6 2]
+ [7 7 5]]
+
+[[1 2 3]
+ [6 6 2]
+ [7 7 5]]
+```
+
+
+## 4.8 Visualización de datos
+### 4.8.2.2 Scatter plot o gráfico de dispersión
+
+**Ejercicio 1: ** Usando `seaborn`, carga la base de datos `iris` y crea un gráfico de dispersión con matplotlib (sin dividir por color la especie) de la longitud del sepalo vs la anchura del sepalo. 
+
+```{python}
+import seaborn as sns
+
+# Cargar el conjunto de datos de iris
+iris = sns.load_dataset('iris')
+
+```
+**Soluciones: **
+
+Luis: 
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+iris = sns.load_dataset("iris")
+
+plt.figure(figsize=(8, 6))
+sns.scatterplot(x="sepal_length", y="sepal_width", hue="species", data=iris)
+plt.xlabel("Longitud del sépalo")
+plt.ylabel("Anchura del sépalo")
+plt.title("Longitud del sépalo vs Anchura del sépalo por especie")
+plt.legend()
+plt.show()
+
+```
+```output
+Imagen pendiente 417
+```
+
+**Ejercicio 2:** Usando la base de datos `penguins` de `seaborn` crea el siguiente gráfico de dispersión.
+
+```{python, echo = FALSE}
+penguins = sns.load_dataset('penguins')
+
+# Ejercicio 2: Scatter Plot
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=penguins, x='bill_length_mm', y='bill_depth_mm', hue='species')
+plt.title('Relación entre Longitud y Profundidad del Pico')
+plt.xlabel('Longitud del Pico (mm)')
+plt.ylabel('Profundidad del Pico (mm)')
+plt.show()
+```
+
+
+**Soluciones: **
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+penguins = sns.load_dataset("penguins")
+plt.figure(figsize=(8, 6))
+plot = sns.scatterplot(x="bill_length_mm", y="bill_depth_mm", hue="species", palette="viridis", data=penguins)
+plt.xlabel("Longitud del pico (mm)")
+plt.ylabel("Profundidad del pico (mm)")
+plt.title("Relación entre Longitud y Profundidad del Pico")
+plt.grid(True)
+plt.legend(loc = 'lower left')
+
+plt.show()
+
+```
+```output
+Pendiente imagen Colab
+```
+
+### 4.8.2.3 Gráfico de barras
+
+**Ejercicio:** Usando la base de datos `penguins` de seaborn, crea un gráfico de barras que muestre la cantidad promedio de pingüinos de cada especie en la base de datos.
+
+```{python, echo = FALSE}
+penguins = sns.load_dataset('penguins')
+
+# Ejercicio 1: Barplot
+plt.figure(figsize=(8, 6))
+sns.barplot(data=penguins, x='species', y='bill_length_mm', ci=None)
+plt.title('Promedio de Longitud del Pico por Especie')
+plt.xlabel('Especie')
+plt.ylabel('Longitud del Pico (mm)')
+plt.show()
+```
+
+**Soluciones: **
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+data = sns.load_dataset("penguins")
+
+plt.figure(figsize=(8, 6))
+sns.barplot(x="species", y="bill_length_mm", data=data, hue="species",  palette="viridis")
+plt.xlabel("Especie")
+plt.ylabel("Longitud de pico  (mm)")
+plt.title("Promedio de longitud del pico por especie")
+plt.show()
+
+```
+```output
+Pendiente imagen colab
+```
+
+#### 4.8.2.4 Gráfico de pastel
+**Ejercicio:** Usando la base de datos `penguins` de seaborn, crea un gráfico de pastel que muestre la proporción de cada especie de pingüino en la base de datos.
+
+```{python, echo = FALSE}
+# Ejercicio 4: Pie Plot
+plt.figure(figsize=(8, 6))
+penguins['species'].value_counts().plot(kind='pie', autopct='%1.1f%%')
+plt.title('Proporción de Especies de Pingüinos')
+plt.ylabel('')
+plt.show()
+```
+
+**Soluciones: **
+Luis: 
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+penguins = sns.load_dataset("penguins")
+species_counts = penguins['species'].value_counts()
+plt.figure(figsize=(8, 6))
+plt.pie(species_counts, labels=species_counts.index, autopct='%1.1f%%', startangle=140)
+plt.title('Proporción de especies de pingüinos')
+plt.axis('equal') 
+plt.show()
+
+```
+```output
+Imagen pendiente
+```
+
+
+#### 4.8.2.5 Boxplot 
+**Ejercicio:** Usando la base de datos `penguins` de seaborn, crea un boxplot que compare las longitudes del pico para cada especie de pingüino en la base de datos.
+
+```{python, echo = FALSE}
+# Ejercicio 5: Boxplot
+plt.figure(figsize=(8, 6))
+sns.boxplot(data=penguins, x='species', y='bill_length_mm')
+plt.title('Comparación de Longitud del Pico por Especie')
+plt.xlabel('Especie')
+plt.ylabel('Longitud del Pico (mm)')
+plt.show()
+```
+**Soluciones: **
+Luis: 
+
+```python
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+penguins = sns.load_dataset('penguins')
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='species', y='bill_length_mm', data=penguins, hue="species")
+plt.title('Comparación de longitudes del pico por especie de pingüino')
+plt.xlabel('Especie')
+plt.ylabel('Longitud del pico (mm)')
+plt.show()
+```
+```output
+Imagen pendiente
+```
+
+#### 4.8.2.6 Histograma
+
+**Ejercicio:** Usando la base de datos `penguins` de seaborn, crea un histograma que muestre la distribución de las longitudes del pico para todas las especies de pingüinos.
+
+```{python, echo=FALSE}
+# Ejercicio 3: Histogram
+plt.figure(figsize=(8, 6))
+plt.hist(penguins['bill_length_mm'], bins=20, density=False, color='skyblue', edgecolor='black')
+plt.title('Distribución de Longitud del Pico')
+plt.xlabel('Longitud del Pico (mm)')
+plt.ylabel('Frecuencia')
+plt.grid(True)
+plt.show()
+```
+
+**Soluciones: **
+```python
+penguins = sns.load_dataset('penguins')
+
+plt.figure(figsize=(8, 6))
+sns.histplot(data=penguins, x='bill_length_mm', bins=20, kde=True,hue="species")
+plt.title('Distribución de Longitudes del Pico')
+plt.xlabel('Longitud del Pico (mm)')
+plt.ylabel('Frecuencia')
+plt.show()
+
+```
+```output
+Imagen pendiente 22
+```
+
+#### 4.8.2.8 Imshow
+
+**Ejercicio: ** Supongamos que tenemos la siguiente función:
+
+\[ f(x, y) = \sin(x) \cdot \cos(y) \]
+
+1. Generar una cuadrícula de valores para \( x \) y \( y \) en el rango de \([-2\pi, 2\pi]\).
+
+2. Calcular los valores de la función \( f(x, y) \) para cada par de puntos \( (x, y) \).
+
+3. Visualizar la función utilizando `imshow` para mostrar la función como una imagen y `contour` para mostrar las curvas de nivel.
+
+4. Tu resultado debe ser similar al siguiente:
+
+```{python, echo = FALSE}
+
+# Paso 1: Generar una cuadrícula de valores para x y y
+x = np.linspace(-2*np.pi, 2*np.pi, 100)
+y = np.linspace(-2*np.pi, 2*np.pi, 100)
+X, Y = np.meshgrid(x, y)
+
+# Paso 2: Calcular los valores de la función f(x, y)
+Z = np.sin(X) * np.cos(Y)
+
+# Paso 3: Visualizar la función utilizando imshow y contour
+plt.figure(figsize=(10, 5))
+
+# Imshow
+plt.subplot(1, 2, 1)
+plt.imshow(Z, extent=[-2*np.pi, 2*np.pi, -2*np.pi, 2*np.pi], cmap='viridis')
+plt.colorbar(label='f(x, y)')
+plt.title('Imagen de f(x, y)')
+plt.xlabel('x')
+plt.ylabel('y')
+
+# Contour
+plt.subplot(1, 2, 2)
+contour_plot = plt.contour(X, Y, Z, cmap='viridis')
+plt.colorbar(contour_plot, label='f(x, y)')
+plt.title('Curvas de Nivel de f(x, y)')
+plt.xlabel('x')
+plt.ylabel('y')
+
+plt.tight_layout()
+plt.show()
+```
+
+**Soluciones: **
+```python
+
+
+```
+```output
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 >>>>>>> Luis
