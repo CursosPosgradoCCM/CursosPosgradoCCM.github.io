@@ -588,9 +588,9 @@ plt.matshow(tablero_invertido)
 plt.show()
 
 ```
-```python
-![Ejercicio de ASPP Latam](C:/Users/ABC/Documents/curso/git/phyton/CursosPosgradoCCM.github.io/Imagenes/ordenamientosol.png)
-```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/ordenamientosol.png)
+
+
 
 **Ejercicio 3:** Comienza creando un  array 3x3:
 
@@ -658,7 +658,7 @@ print(ej2)
 ## 4.8 Visualización de datos
 ### 4.8.2.2 Scatter plot o gráfico de dispersión
 
-**Ejercicio 1: ** Usando `seaborn`, carga la base de datos `iris` y crea un gráfico de dispersión con matplotlib (sin dividir por color la especie) de la longitud del sepalo vs la anchura del sepalo. 
+**Ejercicio 1:** Usando `seaborn`, carga la base de datos `iris` y crea un gráfico de dispersión con matplotlib (sin dividir por color la especie) de la longitud del sepalo vs la anchura del sepalo. 
 
 ```{python}
 import seaborn as sns
@@ -667,45 +667,29 @@ import seaborn as sns
 iris = sns.load_dataset('iris')
 
 ```
-**Soluciones: **
+**Soluciones:**
 
 Luis: 
 
 ```python
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-iris = sns.load_dataset("iris")
-
 plt.figure(figsize=(8, 6))
-sns.scatterplot(x="sepal_length", y="sepal_width", hue="species", data=iris)
-plt.xlabel("Longitud del sépalo")
-plt.ylabel("Anchura del sépalo")
-plt.title("Longitud del sépalo vs Anchura del sépalo por especie")
-plt.legend()
+plt.scatter(iris['sepal_length'], iris['sepal_width'])
+
+plt.xlabel('Longitud del Sépalo (cm)')
+plt.ylabel('Anchura del Sépalo (cm)')
+plt.title('Longitud del Sépalo vs Anchura del Sépalo')
+
 plt.show()
 
 ```
-```output
-Imagen pendiente 417
-```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/longitudvsanchura.png)
+
 
 **Ejercicio 2:** Usando la base de datos `penguins` de `seaborn` crea el siguiente gráfico de dispersión.
 
-```{python, echo = FALSE}
-penguins = sns.load_dataset('penguins')
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/dispersion2.png)
 
-# Ejercicio 2: Scatter Plot
-plt.figure(figsize=(8, 6))
-sns.scatterplot(data=penguins, x='bill_length_mm', y='bill_depth_mm', hue='species')
-plt.title('Relación entre Longitud y Profundidad del Pico')
-plt.xlabel('Longitud del Pico (mm)')
-plt.ylabel('Profundidad del Pico (mm)')
-plt.show()
-```
-
-
-**Soluciones: **
+**Soluciones:**
 
 ```python
 import seaborn as sns
@@ -723,27 +707,17 @@ plt.legend(loc = 'lower left')
 plt.show()
 
 ```
-```output
-Pendiente imagen Colab
-```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/soldispersion2.png)
+
 
 ### 4.8.2.3 Gráfico de barras
 
 **Ejercicio:** Usando la base de datos `penguins` de seaborn, crea un gráfico de barras que muestre la cantidad promedio de pingüinos de cada especie en la base de datos.
 
-```{python, echo = FALSE}
-penguins = sns.load_dataset('penguins')
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/barraspinguinos.png)
 
-# Ejercicio 1: Barplot
-plt.figure(figsize=(8, 6))
-sns.barplot(data=penguins, x='species', y='bill_length_mm', ci=None)
-plt.title('Promedio de Longitud del Pico por Especie')
-plt.xlabel('Especie')
-plt.ylabel('Longitud del Pico (mm)')
-plt.show()
-```
+**Soluciones:**
 
-**Soluciones: **
 ```python
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -758,21 +732,14 @@ plt.title("Promedio de longitud del pico por especie")
 plt.show()
 
 ```
-```output
-Pendiente imagen colab
-```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/barraspinguinossol.png)
 
-#### 4.8.2.4 Gráfico de pastel
+
+### 4.8.2.4 Gráfico de pastel
 **Ejercicio:** Usando la base de datos `penguins` de seaborn, crea un gráfico de pastel que muestre la proporción de cada especie de pingüino en la base de datos.
 
-```{python, echo = FALSE}
-# Ejercicio 4: Pie Plot
-plt.figure(figsize=(8, 6))
-penguins['species'].value_counts().plot(kind='pie', autopct='%1.1f%%')
-plt.title('Proporción de Especies de Pingüinos')
-plt.ylabel('')
-plt.show()
-```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/pastelpinguinos.png)
+
 
 **Soluciones: **
 Luis: 
@@ -789,24 +756,15 @@ plt.axis('equal')
 plt.show()
 
 ```
-```output
-Imagen pendiente
-```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/pastelpinguinossol.png)
 
 
-#### 4.8.2.5 Boxplot 
+### 4.8.2.5 Boxplot 
 **Ejercicio:** Usando la base de datos `penguins` de seaborn, crea un boxplot que compare las longitudes del pico para cada especie de pingüino en la base de datos.
 
-```{python, echo = FALSE}
-# Ejercicio 5: Boxplot
-plt.figure(figsize=(8, 6))
-sns.boxplot(data=penguins, x='species', y='bill_length_mm')
-plt.title('Comparación de Longitud del Pico por Especie')
-plt.xlabel('Especie')
-plt.ylabel('Longitud del Pico (mm)')
-plt.show()
-```
-**Soluciones: **
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/boxpinguinos.png)
+
+**Soluciones:**
 Luis: 
 
 ```python
@@ -821,24 +779,14 @@ plt.xlabel('Especie')
 plt.ylabel('Longitud del pico (mm)')
 plt.show()
 ```
-```output
-Imagen pendiente
-```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/boxpinguinossol.png)
+
 
 #### 4.8.2.6 Histograma
 
 **Ejercicio:** Usando la base de datos `penguins` de seaborn, crea un histograma que muestre la distribución de las longitudes del pico para todas las especies de pingüinos.
 
-```{python, echo=FALSE}
-# Ejercicio 3: Histogram
-plt.figure(figsize=(8, 6))
-plt.hist(penguins['bill_length_mm'], bins=20, density=False, color='skyblue', edgecolor='black')
-plt.title('Distribución de Longitud del Pico')
-plt.xlabel('Longitud del Pico (mm)')
-plt.ylabel('Frecuencia')
-plt.grid(True)
-plt.show()
-```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/histogramapinguinos.png)
 
 **Soluciones: **
 ```python
@@ -852,13 +800,12 @@ plt.ylabel('Frecuencia')
 plt.show()
 
 ```
-```output
-Imagen pendiente 22
-```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/histogramapinguinossol.png)
+
 
 #### 4.8.2.8 Imshow
 
-**Ejercicio: ** Supongamos que tenemos la siguiente función:
+**Ejercicio:** Supongamos que tenemos la siguiente función:
 
 \[ f(x, y) = \sin(x) \cdot \cos(y) \]
 
@@ -870,69 +817,164 @@ Imagen pendiente 22
 
 4. Tu resultado debe ser similar al siguiente:
 
-```{python, echo = FALSE}
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/imshowfuncion.png)
 
-# Paso 1: Generar una cuadrícula de valores para x y y
-x = np.linspace(-2*np.pi, 2*np.pi, 100)
-y = np.linspace(-2*np.pi, 2*np.pi, 100)
-X, Y = np.meshgrid(x, y)
+**Soluciones:**
+```python
+import numpy as np
+import matplotlib.pyplot as plt
 
-# Paso 2: Calcular los valores de la función f(x, y)
-Z = np.sin(X) * np.cos(Y)
+num_points = 100
+x_valores = np.linspace(-2 * np.pi, 2 * np.pi, num_points)
+y_valores = np.linspace(-2 * np.pi, 2 * np.pi, num_points)
 
-# Paso 3: Visualizar la función utilizando imshow y contour
+    x_grid, y_grid = np.meshgrid(x_valores, y_valores)
+
+z_valores = np.sin(x_grid) * np.cos(y_grid)
+
 plt.figure(figsize=(10, 5))
-
-# Imshow
 plt.subplot(1, 2, 1)
-plt.imshow(Z, extent=[-2*np.pi, 2*np.pi, -2*np.pi, 2*np.pi], cmap='viridis')
-plt.colorbar(label='f(x, y)')
-plt.title('Imagen de f(x, y)')
-plt.xlabel('x')
-plt.ylabel('y')
-
-# Contour
+plt.imshow(z_valores, extent=[-2*np.pi, 2*np.pi, -2*np.pi, 2*np.pi], cmap='viridis')
+plt.colorbar()
+plt.title('Imagen de f')
 plt.subplot(1, 2, 2)
-contour_plot = plt.contour(X, Y, Z, cmap='viridis')
-plt.colorbar(contour_plot, label='f(x, y)')
-plt.title('Curvas de Nivel de f(x, y)')
-plt.xlabel('x')
-plt.ylabel('y')
+plt.contour(x_grid, y_grid, z_valores, cmap='viridis')
+plt.colorbar()
+plt.title('Curvas de Nivel')
 
 plt.tight_layout()
 plt.show()
+
 ```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/imshowfuncionsol.png)
 
-**Soluciones: **
+### 4.9 Data frames con pandas
+
+**Ejercicios:**
+
+1. Crea un DataFrame con información sobre empleados, incluyendo Nombre, Edad y Salario. Muestra las primeras 5 filas.
+2. Añade una nueva columna llamada 'Departamento' al DataFrame de empleados.
+3. Encuentra el empleado más joven en el DataFrame.
+4. Filtra los empleados que tienen un salario mayor a $50000.
+5. Ordena los empleados por salario en orden descendente.
+
+**Soluciones:**
+
+Luis
+
 ```python
+import pandas as pd
 
+# 1
+datos_empleados = {
+    'Nombre': ['Luis', 'María', 'Francisco', 'Raul', 'Karina'],
+    'Edad': [30, 25, 35, 28, 40],
+    'Salario': [60000, 55000, 70000, 48000, 80000]
+}
+
+df_empleados = pd.DataFrame(datos_empleados)
+
+print("Primeras 5 filas del DataFrame de empleados:")
+print(df_empleados.head())
+
+# 2
+departamentos = ['Ventas', 'Marketing', 'TI', 'Recursos Humanos', 'Ventas']
+df_empleados['Departamento'] = departamentos
+
+# 3
+empleado_mas_joven = df_empleados[df_empleados['Edad'] == df_empleados['Edad'].min()]
+print("\nEmpleado más joven:")
+print(empleado_mas_joven)
+
+# 4
+empleados_altos_salarios = df_empleados[df_empleados['Salario'] > 50000]
+print("\nEmpleados con salario mayor a $50000:")
+print(empleados_altos_salarios)
+
+# 5
+df_empleados_ordenados = df_empleados.sort_values(by='Salario', ascending=False)
+print("\nEmpleados ordenados por salario en orden descendente:")
+print(df_empleados_ordenados)
 
 ```
 ```output
+Primeras 5 filas del DataFrame de empleados:
+      Nombre  Edad  Salario
+0       Luis    30    60000
+1      María    25    55000
+2  Francisco    35    70000
+3       Raul    28    48000
+4     Karina    40    80000
 
+Empleado más joven:
+  Nombre  Edad  Salario Departamento
+1  María    25    55000    Marketing
+
+Empleados con salario mayor a $50000:
+      Nombre  Edad  Salario Departamento
+0       Luis    30    60000       Ventas
+1      María    25    55000    Marketing
+2  Francisco    35    70000           TI
+4     Karina    40    80000       Ventas
+
+Empleados ordenados por salario en orden descendente:
+      Nombre  Edad  Salario      Departamento
+4     Karina    40    80000            Ventas
+2  Francisco    35    70000                TI
+0       Luis    30    60000            Ventas
+1      María    25    55000         Marketing
+3       Raul    28    48000  Recursos Humanos
+```
+
+### 4.9.2 pivot y pivot_table
+
+**Ejercicio 1:**
+Carga el conjunto de datos 'titanic' de Seaborn y utiliza `pivot` para reorganizar los datos de manera que las filas representen la clase de pasajeros y las columnas representen el sexo de los pasajeros, con los valores siendo la tarifa media pagada por cada grupo.
+
+**Soluciones:**
+
+Luis
+
+```python
+pivot_tabla_resultados = titanic_datos.pivot_table(index='pclass', columns='sex', values='fare', aggfunc='mean')
+pivot_tabla_resultados
+
+```
+```output
+sex	female	male
+pclass		
+1	106.125798	67.226127
+2	21.970121	19.741782
+3	16.118810	12.661633
 ```
 
 
+**Ejercicio 2:**
+Utiliza `pivot_table` para calcular la cantidad total de sobrevivientes agrupados por clase y género en el conjunto de datos 'titanic'.
 
+Luis
 
+```python
+pivot_table_result = titanic_data.pivot_table(index='class', columns='sex', values='survived', aggfunc='sum', margins=True)
+pivot_table_result
 
+```
+```output
+sex	female	male	All
+class			
+First	91	45	136
+Second	70	17	87
+Third	72	47	119
+All	233	109	342
+```
 
+## 4.11 Funciones y scripts
 
+### 4.11.3 Test
 
+**Ejercicio 1:** Crea un test que verifique dos funciones, una de aritmética básica (igualdad entre dos números y multiplicación entre dos números) y la otra función la longitud de elementos de una lista. Realiza el test de ambas funciones con `pytest`.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Ejercicio 2:** Crea un archivo nuevo para hacer test llamado `test_prueba`. Realiza una función prueba que verifique que `1+2` es `3`. Realiza el test. Ahora prueba con `1.1+2.2` es `3.3`, usa pytest.
 
 
 
