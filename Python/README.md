@@ -573,7 +573,7 @@ Para importar el paquete para hacer el plot realiza lo siguiente:
 %matplotlib inline
 from matplotlib import pyplot as plt #libreria para hacer plots
 ```
-![Ejercicio de ASPP Latam](D:/Users/ABC/Documents/curso/git/phyton/CursosPosgradoCCM.github.io/Imagenes/ordenamientoeje2.png)
+![Ejercicio de ASPP Latam](C:/Users/ABC/Documents/curso/git/phyton/CursosPosgradoCCM.github.io/Imagenes/ordenamientoeje2.png)
 
 **Soluciones**
 
@@ -587,8 +587,8 @@ plt.matshow(tablero_invertido)
 plt.show()
 
 ```
-```output
-![Ejercicio de ASPP Latam](D:/Users/ABC/Documents/curso/git/phyton/CursosPosgradoCCM.github.io/Imagenes/ordenamientosol.png)
+```python
+![Ejercicio de ASPP Latam](C:/Users/ABC/Documents/curso/git/phyton/CursosPosgradoCCM.github.io/Imagenes/ordenamientosol.png)
 ```
 
 **Ejercicio 3:** Comienza creando un  array 3x3:
