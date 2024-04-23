@@ -574,7 +574,8 @@ Para importar el paquete para hacer el plot realiza lo siguiente:
 %matplotlib inline
 from matplotlib import pyplot as plt #libreria para hacer plots
 ```
-![Ejercicio de ASPP Latam](C:/Users/ABC/Documents/curso/git/phyton/CursosPosgradoCCM.github.io/Imagenes/ordenamientoeje2.png)
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/ordenamientoeje2.png)
+
 
 **Soluciones**
 
