@@ -975,10 +975,74 @@ All	233	109	342
 
 **Ejercicio 1:** Crea un test que verifique dos funciones, una de aritmética básica (igualdad entre dos números y multiplicación entre dos números) y la otra función la longitud de elementos de una lista. Realiza el test de ambas funciones con `pytest`.
 
+**Soluciones:**
+Luis
+
+```python
+def aritmetica_basica_igual(num1, num2):
+    return num1 == num2
+
+def aritmetica_basica_multiplicar(num1, num2):
+    return num1 * num2
+
+def longitud_lista(lista):
+    return len(lista)
+
+
+def test_aritmetica_basica_igual():
+    assert aritmetica_basica_igual(3, 3) == True  
+    assert aritmetica_basica_igual(5, 7) == False   
+
+def test_aritmetica_basica_multiplicar():
+    assert aritmetica_basica_multiplicar(2, 3) == 6  
+    assert aritmetica_basica_multiplicar(4, 0) == 0  
+
+def test_longitud_lista():
+    assert longitud_lista([1, 2, 3, 4]) == 4  
+    assert longitud_lista([]) == 0             
+
+    test_aritmetica_basica_igual()
+
+```
+
+
 **Ejercicio 2:** Crea un archivo nuevo para hacer test llamado `test_prueba`. Realiza una función prueba que verifique que `1+2` es `3`. Realiza el test. Ahora prueba con `1.1+2.2` es `3.3`, usa pytest.
+```python
 
 
+```
+```output
 
+```
+
+### 4.14 Programación en paralelo
+
+**Ejercicio:** Crea una función para calcular el cuadrado de una lista de números. Ejecutala con %%time para comparar tiempo de ejecución y recursos de las dos maneras, usando paralelización y sin esto.
+
+**Soluciones:**
+Luis
+
+```python
+import time
+def cuadrado(x):
+    return x ** 2
+
+# Creamos una lista de números
+numeros = [1, 2, 3, 4, 5]
+#numeros = np.arange(1, 1001)
+inicio_map = time.time()  
+resultados_map = map(cuadrado, numeros)
+print("Resultados con map:", list(resultados_map)) 
+fin_map = time.time() 
+tiempo_map = fin_map - inicio_map 
+print("Tiempo con map:", tiempo_map, "segundos")  
+
+
+```
+```output
+Resultados con map: [1, 4, 9, 16, 25]
+Tiempo con map: 0.0007224082946777344 segundos
+```
 
 
 
