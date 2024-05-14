@@ -8,3 +8,4 @@ En esta página encontraran las soluciones por los alumnos a los ejercicios del 
 
 [Python](https://cursosposgradoccm.github.io/Python)
 [Shell](https://cursosposgradoccm.github.io/Shell)
+[SQL](https://cursosposgradoccm.github.io/SQL)
