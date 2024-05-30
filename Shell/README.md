@@ -7,10 +7,10 @@
 
 **Soluciones:**
 
-- Solución 1: explicación
+- Solución 1(Atenea): explicación
 
 ```python
-Respuesta
+Esta opción significa 'formato largo' y se utiliza para mostrar información detallada sobre cada archivo o directorio en la lista. El resultado de ls -l incluirá, para cada entrada:permiso,entrada,enlaces,propietario,tamaño, fecha de modificación y nombre.
 ```
 
 Escribir resultado
