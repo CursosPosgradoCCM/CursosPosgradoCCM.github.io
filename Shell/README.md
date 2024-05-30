@@ -79,6 +79,23 @@ Espacio Resultado
 ```
 
 **Ejercicio 5**  Explora las opciones -s y -S. ¿Hay diferencia entre mayúsculas y minúsculas?
+- Solución(Atenea):
+```python
+-'ls - s' muestra los archivos y el tamaño de cada archivo respectivamente.
+-'ls -S' muestra los archivos ordenados por tamaño, comenzando con el más grande. 
+```
+
+Output con 'ls -s':
+
+```output
+total 40
+ 4 Untitled1.ipynb   4 Untitled2.ipynb  32 Untitled.ipynb
+```
+Output con 'ls -S':
+```output
+Untitled.ipynb  Untitled1.ipynb  Untitled2.ipynb
+```
+
 
 ## 2.2 Manipulación de archivos y directorios
 	
