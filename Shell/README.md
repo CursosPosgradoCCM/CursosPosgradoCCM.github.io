@@ -23,7 +23,16 @@ de tiempo (fecha de modificación por defecto).
 Escribir resultado
 
 ```output
-Espacio Resultado
+total 640
+-rw-rw-r-- 1 johanna johanna    205 may 29 21:46 Base_.Rproj
+drwxrwxr-x 2 johanna johanna   4096 may 29 21:46 SQL
+-rw-rw-r-- 1 johanna johanna    468 may 29 21:46 README.md
+-rw-rw-r-- 1 johanna johanna 623431 may 29 21:46 README.html
+drwxrwxr-x 2 johanna johanna   4096 may 29 21:46 Imagenes
+-rw-rw-r-- 1 johanna johanna    154 may 29 21:46 _config.yml
+drwxrwxr-x 2 johanna johanna   4096 may 29 22:48 Python
+drwxrwxr-x 2 johanna johanna   4096 may 30 10:50 Shell
+
 ```
 
 **Ejercicio 2**  ¿Qué es una ruta relativa?
