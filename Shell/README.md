@@ -58,10 +58,10 @@ comando nos direcciona al directorio padre del directorio en el que actualmente
 estamos.
 ```
 
-Escribir resultado. Por ejemplo, supongamos que estamos en el directorio 
-/Descargas/Curso_Comp_Cien/Python entonces suponiendo que el directorio 
-que estuvimos anteriormente fue /Descargas,'cd -' nos direccionara a este último, 
-mientras que 'cd ..' nos direccionara a /Descargas/Curso_Comp_Cien.
+Por ejemplo, supongamos que estamos en el directorio 
+'/Descargas/Curso_Comp_Cien/Python' entonces suponiendo que el directorio 
+que estuvimos anteriormente fue '/Descargas','cd -' nos direccionara a este último, 
+mientras que 'cd ..' nos direccionara a '/Descargas/Curso_Comp_Cien'.
 
 
 
