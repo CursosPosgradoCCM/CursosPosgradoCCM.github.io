@@ -10,7 +10,14 @@
 - Solución 1(Atenea): explicación
 
 ```python
-Esta opción significa 'formato largo' y se utiliza para mostrar información detallada sobre cada archivo o directorio en la lista. El resultado de ls -l incluirá, para cada entrada:permiso,entrada,enlaces,propietario,tamaño, fecha de modificación y nombre.
+-'ls -l' se utiliza para mostrar información 
+detallada sobre cada archivo o directorio en la lista. 
+El resultado de ls -l incluirá, para cada entrada:permiso,entrada,
+enlaces,propietario,tamaño, fecha de modificación y nombre.
+-La opción 'ls -t' lista los ficheros por orden de la marca 
+de tiempo (fecha de modificación por defecto).
+-La opción 'ls -r'  revierte el orden de clasificación.
+
 ```
 
 Escribir resultado
