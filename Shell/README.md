@@ -42,7 +42,7 @@ drwxrwxr-x 2 johanna johanna   4096 may 30 10:50 Shell
 ```python
 Las rutas relativas indican el camino para encontrar un elemento, 
 pero basándonos en el directorio desde el que se ejecuta la orden. 
-```
+x```
 
 **Ejercicio 3** ¿A donde nos lleva cd -? y si volvemos a colocar cd - ¿a donde nos lleva? ¿Cuál es la diferencia entre cd .. y cd -?
 
@@ -58,12 +58,10 @@ comando nos direcciona al directorio padre del directorio en el que actualmente
 estamos.
 ```
 
-Por ejemplo, supongamos que estamos en el directorio 
-` /Descargas/Curso_Comp_Cien/Python` entonces suponiendo que el directorio 
-que estuvimos anteriormente fue `/Descargas ` 'cd -' nos direccionara a este último, 
-mientras que 'cd ..' nos direccionara a ` /Descargas/Curso_Comp_Cien`.
-
-
+Escribir resultado. Por ejemplo, supongamos que estamos en el directorio 
+`/Descargas/Curso_Comp_Cien/Python` entonces suponiendo que el directorio 
+que estuvimos anteriormente fue `/Descargas 'cd -'` nos direccionara a este último, 
+mientras que `'cd ..'` nos direccionara a `/Descargas/Curso_Comp_Cien`.
 
 
 **Ejercicio 4** Ejercicio: Supongamos que tenemos el siguiente árbol de datos en nuestra computadora y que estamos en /Users/thing/. ¿Si colocamos en la terminal ls -F ../backup que nos mostrará?
