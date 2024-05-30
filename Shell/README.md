@@ -49,14 +49,23 @@ pero basándonos en el directorio desde el que se ejecuta la orden.
 - Solución 1: explicación
 
 ```python
-Respuesta
+-'cd -' imprime el directorio en el que estuvimos anteriormente y 
+nos cambia a él, si lo volvemos a ejecutar una seguda vez imprime el
+directorio actual y nos cambia al directorio actual.
+-La diferencia entre 'cd -' y 'cd ..' es que el primero nos redirecciona 
+al directorio en el que anteriormente estabamos, mientras que el segundo
+comando nos direcciona al directorio padre del directorio en el que actualmente
+estamos.
 ```
 
-Escribir resultado
+Escribir resultado. Por ejemplo, supongamos que estamos en el directorio 
+``` /Descargas/Curso_Comp_Cien/Python````
+entonces suponiendo que el directorio que estuvimos anteriormente fue 
+````/Descargas ```
+'cd -' nos direccionara a este último, mientras que 'cd ..' nos direccionara a 
+``` /Descargas/Curso_Comp_Cien```
 
-```output
-Espacio Resultado
-```
+
 
 **Ejercicio 4** Ejercicio: Supongamos que tenemos el siguiente árbol de datos en nuestra computadora y que estamos en /Users/thing/. ¿Si colocamos en la terminal ls -F ../backup que nos mostrará?
 
