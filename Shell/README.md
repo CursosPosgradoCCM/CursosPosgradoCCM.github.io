@@ -145,6 +145,7 @@ Espacio Resultado 4
 4. ls ethane.*
 ```
 Solución(Atenea):
+
 ```python
 ls *t*ane.pdb,
 ls *t??ne.pdb
