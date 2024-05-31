@@ -473,7 +473,10 @@ Supongamos que queremos ejecutar el script llamado goostats.sh, este script nece
 Solución(Atenea):
 
 ```python
-$ for datafile in {*A.txt,*B.txt}; do  echo $datafile; done
+$ for datafile in {*A.txt,*B.txt}
+> do  
+>	echo $datafile
+> done
 ```
 
 **8.3** Crea un ciclo que te muestre en pantalla el nombre del archivo de salida con el formato indicado. Pero quieres asegurarte que para el archivo input sea el nombre correcto el del archivo de salida.
@@ -481,33 +484,56 @@ $ for datafile in {*A.txt,*B.txt}; do  echo $datafile; done
 Solución(Atenea):
 
 ```python
-$ for datafile in {*A.txt,*B.txt}; do  echo stats-$datafile; done
+$ for datafile in {*A.txt,*B.txt} 
+> do  
+>	echo stats-$datafile 
+> done
 ```
 
 
 **8.4** Crea un ciclo que muestre los comandos a usarse para correr el script con los archivos de entrada y de salida del paso 2 y 3. Para correr un script como se indica, se usa el comando bash nombre_archivo.sh input output.
 
 ```python
-$ for datafile in {*A.txt,*B.txt}; do  bash goostats.sh $datafile  stats-$datafile; done
+$ for datafile in {*A.txt,*B.txt}
+> do  
+>	bash goostats.sh $datafile  stats-$datafile
+> done
 ```
 
 **8.5** Agrega un echo $datafile para saber en que archivo va tu ciclo.
 
 ```python
-for datafile in {*A.txt,*B.txt}; do  echo $datafile; bash goostats.sh $datafile  stats-$datafile; done
+$ for datafile in {*A.txt,*B.txt}
+> do  
+>	echo $datafile
+>	 bash goostats.sh $datafile  stats-$datafile
+> done
 ```
 ## 2.5 Scripts
 
 **Ejercicio 1** El archivo animals.csv ya vimos que es un archivo separado por comas que indica las especies y la cantidad de cada uno. Crea un script que se pueda aplicar a cualquier cantidad de archivos con ese formato y que te diga las especies únicas de cada archivo. Crea 3 archivos similares al animals.csv (copia y modifica) y prueba tu script.
 
+Solución(Atenea):
+
+El contenido del script que llamaremos especies.sh  es el siguiente:
 ```python
-Respuesta
+for archivo in $@
+do
+	echo "Para " $archivo "sus especies únicas son: "
+	cut -d, -f2 $archivo| sort | uniq  
+done
+
 ```
 
-Escribir resultado
 
 ```output
-Espacio Resultado
+$ bash especies.sh animals.csv 
+Para  animals.csv sus especies únicas son: 
+bear
+deer
+fox
+rabbit
+raccoon
 ```
 
 **Ejercicio 2** Corre el siguiente comando:
@@ -517,14 +543,19 @@ $ history | tail -n 5 > recientes.sh
 
 ¿Qué contiene ese archivo? ¿Observa la última línea del archivo? ¿Porqué guarda esa línea?
 
+Solución(Atenea):
+El archivo contiene los ultimos 5 comandos ejecutados en bash(incluyendo el comando ejecutado 
+anteriormente). Guarda este último ya que el comando history guarda todos los comandos
+ejecutados.
+
+Salida del archivo recientes.sh:
+
 ```python
-Respuesta
-```
-
-Escribir resultado
-
-```output
-Espacio Resultado
+ 1807  cat animals.csv 
+ 1808  cat especies.sh 
+ 1809  bash especies.sh animals.csv 
+ 1810  $ history | tail -n 5 > recientes.sh
+ 1811  history | tail -n 5 > recientes.sh
 ```
 
 **Ejercicio 3** En la carpeta alkanes supongamos que tenemos un script.sh que contiene lo siguiente:
@@ -536,27 +567,40 @@ Dentro del directorio alkanes, corre lo siguiente:
 ```python
 $ bash script.sh '*.pdb' 1 1
 ```
+Solución(Atenea):
 ¿Qué esperas obtener?
 
 ```python
-Respuesta
+Espero obtener el primer y el último renglon de cada archivo con extensión .pdb de la carpeta alkanes.
 ```
 
-Escribir resultado
+Por cuestiones de espacio, sólo se imprimira las primeras lineas despues de imprimir el comando anterior.
 
 ```output
-Espacio Resultado
+==> alkanes.pdb <==
+COMPND      PROPANE
+
+==> all.pdb <==
+cat alkanes.pdb
+
+==> cubane.pdb <==
+COMPND      CUBANE
+
 ```
 **Ejercicio 4** Crea un script llamado longest.sh que reciba como argumentos un directorio y una extensión de archivos y que te devuelva el archivo en el directorio, que tenga esa extensión, con el mayor número de líneas.
 
+Solución(Atenea):
+
+El contenido de longest.sh debera ser similar a:
 ```python
-Respuesta
+wc -l $1/*$2| sort -r | head -n2|tail -n1
 ```
 
-Escribir resultado
-
+Si ejecutamos lo siguiente obtendremos el siguiente output:
 ```output
-Espacio Resultado
+$bash longest.sh alkanes '.pdb'
+  129 alkanes/alkanes.pdb
+
 ```
 
 **Ejercicio 5**  Considera los archivos que están en la carpeta alkanes. Explica que hace cada uno de los siguientes scripts al correrlos como bash script1.sh *.pdb, bash script2.sh *.pdb y bash script3.sh *.pdb.
@@ -579,14 +623,12 @@ done
 echo $@.pdb
 ```
 
+Solución(Atenea):
+
 ```python
-Respuesta
-```
-
-Escribir resultado
-
-```output
-Espacio Resultado
+El primer script imprime todos los nombres de archivos y directorios que incluyan en su nombre un punto.
+El segundo script imprime el contenido de los 3 primeros archivos con extensión .pdb
+Por último el tercer archivo imprime el nombre de todos los archivos con extensión .pdb
 ```
 
 
@@ -611,6 +653,11 @@ $ bash -x do-errors.sh NENE*A.txt NENE*B.txt
 ```
 ¿Cuál es el output? ¿Cuál es la línea responsable del error?
 
+Solución(Atenea):
+
+```python
+$ bash -x do-errors.sh NENE*A.txt NENE*B.txt
+```
 
 ## 2.6  Buscando y encontrando cosas
 
