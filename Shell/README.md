@@ -389,28 +389,20 @@ extensión en alkanes.pdb
 
 **Ejercicio 5**  Crea un ciclo que muestre las últimas 20 líneas de cada archivo en la carpeta creatures.
 
+Solución(Atenea):
+
 ```python
-Respuesta
+$ for filename in *.dat; do  cat $filename | tail -n20 ; done
 ```
 
-Escribir resultado
-
-```output
-Espacio Resultado
-```
 
 **Ejercicio 6** Crea un ciclo for que copie los dos archivos a dos nuevos archivos llamados original-basilisk.dat, original-unicorn.dat y original-minotaur.dat.
 
+Solución(Atenea):
+
 ```python
-Respuesta
+$ for filename in *.dat; do cp $filename original-$filename; done
 ```
-
-Escribir resultado
-
-```output
-Espacio Resultado
-```
-
 **Ejercicio 7** Supongamos que queremos previsualizar los comandos que el siguiente ciclo va a realizar en lugar de correrlo primero para asegurarnos de que está haciendo lo que queremos.
 	
 
