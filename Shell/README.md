@@ -146,6 +146,7 @@ Espacio Resultado 4
 4. ls ethane.*
 ```
 Solución(Atenea):
+
 ```python
 ls *t*ane.pdb,
 ls *t??ne.pdb
@@ -163,7 +164,9 @@ $ wc -l *.pdb
 ```
 
 **Ejercicio 2** De los archivos que están en la carpeta alkane, ¿cuál tiene la menor cantidad de líneas?
+
 Solución (Atenea):
+
 ```python
 $ wc -l *.pdb
 ```
@@ -172,9 +175,6 @@ Escribir resultado
 
 ```output
 9 methane.pdb
-12 ethane.pdb
-15 propane.pdb
-
 ```
 
 **Ejercicio 3**  Realiza las siguientes instrucciones dos veces cada una. Explora las diferencias. ¿Qué hace el operador >>?
@@ -188,14 +188,16 @@ $ echo hola >> test2.txt
 ```
 
 ```python
-El operador >> sobreescribe la salida sobre el archivo si existe ysi no existe crea el archivo.
+El operador >> sobreescribe la salida sobre el archivo si es que existe y si no existe crea el archivo.
 ```
 
-Output(primer comando) despues de ejecutar el comando `cat test1.txt` :
+Output(primer comando) despues de ejecutar el comando `cat test1.txt`:
+
 ```output
 hola
 ```
-Output(segundo comando) despues de ejecutar el comando `cat test2.txt` :
+Output(segundo comando) despues de ejecutar el comando `cat test2.txt`:
+
 ```output
 hola
 hola
@@ -207,6 +209,17 @@ hola
 ```output
 $ head -n 3 animals.csv > animals-subset.csv
 $ tail -n 2 animals.csv >> animals-subset.csv
+```
+
+Escribir resultado:
+
+
+```output
+2012-11-05,deer,5
+2012-11-05,rabbit,22
+2012-11-05,raccoon,7
+2012-11-07,rabbit,16
+2012-11-07,bear,1
 ```
 
 ### 2.3.1 Tuberías
@@ -229,14 +242,15 @@ Espacio Resultado
 $ cat animals.csv | head -n 5 | tail -n 3 | sort -r > final.txt
 ```
 
-```python
-Respuesta
-```
 
 Escribir resultado
 
 ```output
-Espacio Resultado
+2012-11-05,deer,5
+2012-11-05,rabbit,22
+2012-11-05,raccoon,7
+2012-11-07,rabbit,16
+2012-11-07,bear,1
 ```
 
 **Ejercicio 3** ¿Porqué se necesita colocar el sort antes del uniq?
