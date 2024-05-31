@@ -260,15 +260,14 @@ Solución(Atenea):
 ```
 
 **Ejercicio 3** ¿Porqué se necesita colocar el sort antes del uniq?
+
+Solución(Atenea):
+
 ```python
-Respuesta
+El comando uniq solo devuelve los elementos duplicados de un archivo/directorio si es que esta ordenado.
 ```
 
 Escribir resultado
-
-```output
-Espacio Resultado
-```
 
 **Ejercicio 4** Si quisiéramos ver cuantos animales hay de cada tipo, ¿que instrucción tendríamos que usar?
 
@@ -286,15 +285,11 @@ Espacio Resultado
 
 **Ejercicio 1** Crea un ciclo que muestre en pantalla (echo) todos los números del 0 al 9.
 
+Solución(Atenea):
 ```python
-Respuesta
+$ for i in {0..9}; do  echo "$i"; done
 ```
 
-Escribir resultado
-
-```output
-Espacio Resultado
-```
 
 **Ejercicio 2** Ve a la carpeta shell-lesson-data/exercise-data/alkanes y lista lo que hay. 1) ¿Cuál es el output del siguiente código?
 
@@ -313,17 +308,41 @@ $ for datafile in *.odb
 >     ls $datafile
 > done
 ```
+Solución(Atenea):
 Explica las diferencias.
 
 ```python
-Respuesta
+Con el primer ciclo para cada archivo con extensión .pdb se esta imprimiendo los nombres de todos los archivos con esta extensión.
+Mientras que para el segundo ciclo para cada archivo con extensión .pdb se imprime su nombre solo una vez.
 ```
 
-Escribir resultado
+Salida 1:
 
 ```output
-Espacio Resultado
+alkanes.pdb  all.pdb  cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+alkanes.pdb  all.pdb  cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+alkanes.pdb  all.pdb  cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+alkanes.pdb  all.pdb  cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+alkanes.pdb  all.pdb  cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+alkanes.pdb  all.pdb  cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+alkanes.pdb  all.pdb  cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+alkanes.pdb  all.pdb  cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+
 ```
+
+Salida 2:
+
+```output
+alkanes.pdb
+all.pdb
+cubane.pdb
+ethane.pdb
+methane.pdb
+octane.pdb
+pentane.pdb
+propane.pdb
+```
+
 
 **Ejercicio 3**  En el directorio shell-lesson-data/exercise-data/alkanes, ¿cuál sería el output del siguiente código?
 
@@ -335,14 +354,16 @@ $ for filename in c*
 ```
 Y si en lugar de c* usamos c?
 
+Solución(Atenea):
 ```python
-Respuesta
+El segundo código marca un error puesto que no existe ningún archivo con ese nombre.
 ```
 
-Escribir resultado
+Output del primer código:
 
 ```output
-Espacio Resultado
+cubane.pdb
+
 ```
 
 **Ejercicio 4** Explora el siguiente código. ¿Cuál es el efecto de guardar en este ciclo?
@@ -356,14 +377,14 @@ $ for alkanes in *.pdb
 ```
 ¿Cuál sería la diferencia si usamos ahora >>?
 
+Solución(Atenea):
+
 ```python
-Respuesta
-```
-
-Escribir resultado
-
-```output
-Espacio Resultado
+El primer ciclo imprime los nombres de los archivos con extensión .pdb y además 
+copia el contenido del último archivo con tal extensión en el archivo alkanes.pdb.
+El segundo ciclo imprime los nombres de los archivso con extensión .pdb pero
+difiere en que sobreescribe el contenido de cada uno de los archivos con tal 
+extensión en alkanes.pdb
 ```
 
 **Ejercicio 5**  Crea un ciclo que muestre las últimas 20 líneas de cada archivo en la carpeta creatures.
