@@ -431,79 +431,72 @@ $ for filename in *.pdb
 ```
 Corre los dos códigos y explora el contenido del archivo all.pdb.
 
+Solución(Atenea):
 
 ```python
-Respuesta
+El segundo código permite visualizar los cambios que realiza el ciclo sobre el archivo all.pdb.
 ```
-
-Escribir resultado
-
+Output código 1:
 ```output
-Espacio Resultado
+cat alkanes.pdb
+cat cubane.pdb
+cat ethane.pdb
+cat methane.pdb
+cat octane.pdb
+cat pentane.pdb
+cat propane.pdb
 ```
-
+El segundo código no altera el archivo all.pdb.
 **Ejercicio 8** En la carpeta norht-pacific-gyre se encuentran dos scripts (.sh) y una lista de archivos. Esta lista de archivos tiene terminaciones A, B y en el caso de que la terminación sea Z significa que el archivo está corrupto.
 
 **8.1**¿Cómo podrías darte cuenta que los archivos con terminación Z están corruptos?
+
+Solución(Atenea):
+
 ```python
-Respuesta
+Una posibilidad de distinguir si un archivo esta corrupto o no, es comparar su tamaño con el de los demás, si este difiere mucho
+entonces se trata de un archivo corrupto.
 ```
 
-Escribir resultado
+Usando el comando `ls -sh` vemos que sólo el  archivo 4NENE02018B.txt esta  corrupto.
 
 ```output
-Espacio Resultado
+total 140K
+8.0K NENE01751A.txt  8.0K NENE01729B.txt  8.0K NENE01978B.txt  8.0K NENE01843B.txt  4.0K NENE02018B.txt
+8.0K NENE01751B.txt  8.0K NENE01843A.txt  8.0K NENE02043A.txt  8.0K NENE01971Z.txt  
+8.0K NENE01729A.txt  8.0K NENE02043B.txt  8.0K NENE01978A.txt  8.0K NENE01736A.txt
+8.0K NENE01812A.txt  8.0K NENE02040A.txt  8.0K NENE02040Z.txt  8.0K NENE02040B.txt
 ```
 Supongamos que queremos ejecutar el script llamado goostats.sh, este script necesita recibir dos cosas, el archivo de entrada y el nombre del archivo de salida. Supongamos que queremos correr este script para todos los archivos con terminación A y B y que queremos que los archivos de salida se llamen stats-$datafile
 
 **8.2** Crea un ciclo que te muestre en pantalla el nombre del archivo a usar como input.
 
+Solución(Atenea):
+
 ```python
-Respuesta
-```
-
-Escribir resultado
-
-```output
-Espacio Resultado
+$ for datafile in {*A.txt,*B.txt}; do  echo $datafile; done
 ```
 
 **8.3** Crea un ciclo que te muestre en pantalla el nombre del archivo de salida con el formato indicado. Pero quieres asegurarte que para el archivo input sea el nombre correcto el del archivo de salida.
 
+Solución(Atenea):
+
 ```python
-Respuesta
+$ for datafile in {*A.txt,*B.txt}; do  echo stats-$datafile; done
 ```
 
-Escribir resultado
-
-```output
-Espacio Resultado
-```
 
 **8.4** Crea un ciclo que muestre los comandos a usarse para correr el script con los archivos de entrada y de salida del paso 2 y 3. Para correr un script como se indica, se usa el comando bash nombre_archivo.sh input output.
 
 ```python
-Respuesta
-```
-
-Escribir resultado
-
-```output
-Espacio Resultado
+$ for datafile in {*A.txt,*B.txt}; do  bash goostats.sh $datafile  stats-$datafile; done
 ```
 
 **8.5** Agrega un echo $datafile para saber en que archivo va tu ciclo.
 
 ```python
-Respuesta
+for datafile in {*A.txt,*B.txt}; do  echo $datafile; bash goostats.sh $datafile  stats-$datafile; done
 ```
-
-Escribir resultado
-
-```output
-Espacio Resultado
-```
-
 ## 2.5 Scripts
 
 **Ejercicio 1** El archivo animals.csv ya vimos que es un archivo separado por comas que indica las especies y la cantidad de cada uno. Crea un script que se pueda aplicar a cualquier cantidad de archivos con ese formato y que te diga las especies únicas de cada archivo. Crea 3 archivos similares al animals.csv (copia y modifica) y prueba tu script.
