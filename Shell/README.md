@@ -80,7 +80,9 @@ Espacio Resultado
 ```
 
 **Ejercicio 5**  Explora las opciones -s y -S. ¿Hay diferencia entre mayúsculas y minúsculas?
-- Solución(Atenea):
+
+ Solución(Atenea):
+
 ```python
 'ls - s' muestra los archivos y el tamaño de cada archivo respectivamente.
 'ls -S' muestra los archivos ordenados por tamaño, comenzando con el más grande. 
@@ -178,7 +180,9 @@ Escribir resultado
 ```
 
 **Ejercicio 3**  Realiza las siguientes instrucciones dos veces cada una. Explora las diferencias. ¿Qué hace el operador >>?
+
 Solución(Atenea):
+
 ```output
 $ echo hola > test1.txt
 ```
@@ -210,6 +214,7 @@ hola
 $ head -n 3 animals.csv > animals-subset.csv
 $ tail -n 2 animals.csv >> animals-subset.csv
 ```
+Solución (Atenea):
 
 Escribir resultado:
 
@@ -226,31 +231,32 @@ Escribir resultado:
 
 **Ejercicio 1** De los archivos que están en la carpeta alkanes, obten los 3 archivos con la menor cantidad de líneas.
 
+Solución(Atenea):
+
 ```python
-Respuesta
+$ wc -l *.pdb | sort | head -n 3
 ```
 
 Escribir resultado
 
 ```output
-Espacio Resultado
+9 methane.pdb
+12 ethane.pdb
+15 propane.pdb
 ```
 
 **Ejercicio 2** Explora el archivo exercise-data/animals-counts/animals.csv. ¿Cuál será el resultado de la siguiente instrucción? 
 
-```output
+```python
 $ cat animals.csv | head -n 5 | tail -n 3 | sort -r > final.txt
 ```
 
-
-Escribir resultado
+Solución(Atenea):
 
 ```output
-2012-11-05,deer,5
-2012-11-05,rabbit,22
+2012-11-06,rabbit,19
+2012-11-06,deer,2
 2012-11-05,raccoon,7
-2012-11-07,rabbit,16
-2012-11-07,bear,1
 ```
 
 **Ejercicio 3** ¿Porqué se necesita colocar el sort antes del uniq?
