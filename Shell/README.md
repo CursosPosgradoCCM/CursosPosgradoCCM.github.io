@@ -159,29 +159,26 @@ ls *t??ne.pdb
 **Ejercicio 1** ¿Cuál opción nos permite extraer solo la cantidad de líneas del archivo?
 
 ```python
-Respuesta
-```
-
-Escribir resultado
-
-```output
-Espacio Resultado
+$ wc -l *.pdb
 ```
 
 **Ejercicio 2** De los archivos que están en la carpeta alkane, ¿cuál tiene la menor cantidad de líneas?
-
+Solución (Atenea):
 ```python
-Respuesta
+$ wc -l *.pdb
 ```
 
 Escribir resultado
 
 ```output
-Espacio Resultado
+9 methane.pdb
+12 ethane.pdb
+15 propane.pdb
+
 ```
 
 **Ejercicio 3**  Realiza las siguientes instrucciones dos veces cada una. Explora las diferencias. ¿Qué hace el operador >>?
-
+Solución(Atenea):
 ```output
 $ echo hola > test1.txt
 ```
@@ -191,14 +188,19 @@ $ echo hola >> test2.txt
 ```
 
 ```python
-Respuesta
+El operador >> sobreescribe la salida sobre el archivo si existe ysi no existe crea el archivo.
 ```
 
-Escribir resultado
-
+Output(primer comando) despues de ejecutar el comando `cat test1.txt` :
 ```output
-Espacio Resultado
+hola
 ```
+Output(segundo comando) despues de ejecutar el comando `cat test2.txt` :
+```output
+hola
+hola
+```
+
 
 **Ejercicio 4** Considera el archivo /exercise-data/animal-counts/animals.csv. Después de aplicar los siguientes dos comandos, ¿qué hay en el archivo animals-subset.csv?
 
