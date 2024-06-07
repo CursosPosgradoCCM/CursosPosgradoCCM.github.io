@@ -310,12 +310,94 @@ William Dyer, Frank Pabodie, Anderson Lake, Valentina Roerich, Frank Danforth
 ```
 
 
+### Combinando datos
+
+**Ejercicio 1:**  Escribe un query que liste todos las lecturas de radiaciones del sitio DR-1
+
+
+**Soluciones:**
+Francisco:
+```sql
+sqlite> SELECT reading FROM Survey JOIN Visited ON taken=id WHERE site='DR-1';
+```
+```output
+reading
+-------
+0.13
+9.82
+0.09
+7.8
+11.25
+```
+**Ejercicio 2:**  Escribe un query que liste todos los sitios visitados por una persona llamada Frank.
+
+
+**Soluciones:**
+Francisco:
+```sql
+sqlite> SELECT site FROM Visited JOIN Survey JOIN Person ON Person.id=Survey.person AND Survey.taken=Visited .id WHERE personal='Frank';
+```
+```output
+site
+----
+DR-3
+DR-3
+DR-3
+DR-3
+DR-3
+```
 
 
 
+**Ejercicio 3:** Escribe una consulta que muestre cada sitio con su ubicación exacta (latitud, longitud) ordenada por fecha de visita, seguida del nombre personal y apellido de la persona que visitó el sitio, y el tipo de medición realizada junto con su lectura. Por favor, evita todos los valores nulos. Consejo: deberías obtener 15 registros con 8 campos.
+
+**Soluciones:**
+Francisco:
+```sql
+sqlite> SELECT site, lat, long,personal, family, quant FROM Site JOIN Visited JOIN Survey JOIN Person ON Person.id=Survey.person AND Visited.id=Survey.taken AND Site.name=Visited.site WHERE quant IS NOT NULL ORDER BY dated;
+```
+```output
+site   lat     long     personal   family   quant
+-----  ------  -------  ---------  -------  -----
+DR-3   -47.15  -126.72  Anderson   Lake     rad
+DR-3   -47.15  -126.72  Anderson   Lake     sal
+DR-3   -47.15  -126.72  Anderson   Lake     temp
+DR-3   -47.15  -126.72  Valentina  Roerich  sal
+DR-1   -49.85  -128.57  William    Dyer     rad
+DR-1   -49.85  -128.57  William    Dyer     sal
+DR-1   -49.85  -128.57  William    Dyer     rad
+DR-1   -49.85  -128.57  William    Dyer     sal
+DR-3   -47.15  -126.72  Frank      Pabodie  rad
+DR-3   -47.15  -126.72  Anderson   Lake     sal
+DR-3   -47.15  -126.72  Frank      Pabodie  temp
+DR-3   -47.15  -126.72  Frank      Pabodie  rad
+DR-3   -47.15  -126.72  Frank      Pabodie  rad
+DR-3   -47.15  -126.72  Frank      Pabodie  temp
+DR-3   -47.15  -126.72  Anderson   Lake     sal
+MSK-4  -48.87  -123.4   Anderson   Lake     rad
+MSK-4  -48.87  -123.4   Anderson   Lake     sal
+MSK-4  -48.87  -123.4   Valentina  Roerich  sal
+DR-1   -49.85  -128.57  Valentina  Roerich  rad
+```
 
 
+### Importar tsv o csv
+
+**Ejercicio 1:** ¿Cuántos organismos faltan de ensamblarse? y de anotarse?
 
 
+**Soluciones:**
 
 
+**Ejercicio 2:** De la tabla de training, cuantos organismos son resistentes a cada antibioitico? Realiza una tabla como la siguiente:
+
+
+**Soluciones:**
+Francisco:
+Yo seleccioné la bacteria Salmonella, donde ninguna muestra estaba anotada
+```sql
+
+```
+```output
+
+```
