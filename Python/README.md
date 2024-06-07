@@ -51,6 +51,7 @@ Resultado
 [1, 0, 3, 2, 5, 4, 7, 6, 8]
 ```
 
+
 **Ejercicio 2:** Dada una lista de letras, invierte el orden de los elementos en grupos de tres. Por ejemplo, si la lista es `[‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’]`, el resultado sería `[‘c’, ‘b’, ‘a’, ‘f’, ‘e’, ‘d’, ‘i’, ‘h’, ‘g’]`.
 
 **Soluciones:**
@@ -108,7 +109,6 @@ suma = 1+3
 #4
 print("cadena 1" + " cadena2")
 ```
-
 
 Luis:
 ```python
@@ -187,6 +187,7 @@ es 0
 **Ejercicio 2**
 Crea un programa que determine si un número es par o impar.
 
+
 Luis: 
 
 ```python
@@ -203,6 +204,7 @@ else:
 ```output
 El número es impar.
 ```
+
 
 
 ## Bucles
@@ -266,6 +268,14 @@ for i in range(1500,2701):
 ```output
 1505
 ```
+
+
+## iteración sobre secuencias
+
+**Ejercicio 1:**
+Escribe un programa que imprima cada letra de la cadena "Python es genial".
+
+**Soluciones**
 
 Luis: 
 ```python
@@ -340,6 +350,7 @@ i
 a
 l
 ```
+
 ###  Compresiones de listas
 
 
@@ -360,6 +371,20 @@ print(cuadrados_numeros_pares)
 ```
 ```output
 [4, 16, 36, 64, 100]
+```
+
+Francisco Santiago:
+
+```python
+numeros=[1,2,3,4,5,6]
+
+cuadrados_pares=[x**2 for x in numeros if x%2==0]
+
+print(cuadrados_pares)        
+
+```
+```output
+[4, 16, 36]
 ```
 
 Ejercicio 2: Dada una lista de cadenas, crea una nueva lista que contenga todas las cadenas convertidas a mayúsculas. Por ejemplo, si tienes la lista siguiente:
@@ -388,6 +413,19 @@ print(cadenas_mayusculas)
 ['HOLA', 'PYTHON', 'MUNDO', 'PROGRAMACIÓN']
 ```
 
+Francisco Santiago:
+
+```python
+cadenas=["fsfgsrh", "boidntiod", "bobnrobni"]
+MAYUSCULAS=[cadena.upper() for cadena in cadenas]
+MAYUSCULAS
+
+
+```
+```output
+['FSFGSRH', 'BOIDNTIOD', 'BOBNROBNI']
+```
+
 Ejercicio 3: Dada una lista de números enteros, crea una lista que contenga solo los números primos de la lista dada, sin definir una función adicional.
 
 Luis: 
@@ -401,6 +439,17 @@ print(numeros_primos)
 ```
 ```output
 [2, 3, 5, 7, 11, 13]
+```
+
+Francisco Santiago: 
+
+```python
+primos=[x for x in numeros for i in range(x) if x!=1 and i==i ]
+primos
+
+```
+```output
+[2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6]
 ```
 
 ##  Numpy 
@@ -419,10 +468,34 @@ print(array)
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
+Francisco Santiago:
+
+```python
+array_1d = list(range(1, 11))
+
+array_1d
+
+```
+```output
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
 **Ejercicio 2** Crea una matriz 3x3 con todos los elementos iguales a 5 e imprímela.
 
 Luis
 
+```python
+matriz = np.full((3, 3), 5)
+print(matriz)
+
+```
+```output
+[[5 5 5]
+ [5 5 5]
+ [5 5 5]]
+```
+
+Francisco Santiago:
 ```python
 matriz = np.full((3, 3), 5)
 print(matriz)
@@ -445,8 +518,10 @@ Luis
 
 ```python
 matriz = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-suma_elementos = np.sum(matriz)
-print(suma_elementos) 
+
+suma=np.sum(matriz)
+
+print(suma)
 
 ```
 ```output
@@ -484,6 +559,20 @@ print(letras_extraidas)
 ```output
 ['O' 'M' 'G' 'W' 'O' 'Z']
 ```
+Francisco Santiago:
+
+```python
+a=np.array(list("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234")).reshape(5,6)
+a
+
+a[[2,2,1],[2,0,0]]
+a[[3,2,4],[4,2,1]]
+
+```
+
+```output
+array(['W', 'O', 'Z'], dtype='<U1')
+```
 
 **Ejercicio 2** Considerea el siguiente array y extrae el array [ 5, 6, 7, 8, 9, 10, 11] usando una máscara boleana:
 ```python
@@ -500,11 +589,14 @@ np.arange(12).reshape(4,3)
 
 **Soluciones**
 
+Francisco Santiago:
 ```python
-
+mask = (b>5)
+b[mask]
 
 ```
 ```output
+array([ 6,  7,  8,  9, 10, 11])
 
 ```
 
@@ -591,6 +683,17 @@ plt.show()
 ```
 ![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/ordenamientosol.png)
 
+Francisco San 3
+```python
+B= np.zeros(121).reshape(11,11)
+B
+from matplotlib import pyplot as plt
+
+B[:,[0,2,4,6,8,10]]=1
+B[[1,3,5,7,9],:]=0
+plt.matshow(B)
+```
+![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/main/Imagenes/Ejercicio_matriz.png)
 
 
 **Ejercicio 3:** Comienza creando un  array 3x3:
@@ -655,6 +758,32 @@ print(ej2)
  [7 7 5]]
 ```
 
+```python
+ej= np.array([[6,2,3], [1,7,2], [7,6,5]])
+ej
+
+ej[-1] = np.sort(ej[-1])
+
+print(ej[-1])
+
+#inciso b
+
+#con fancy index
+print(ej[0][[1,2,0]])
+print(ej[1][[0,2,1]])
+
+#con in-place
+sorted_cols = np.sort(ej, axis=0)
+
+```
+```output
+array([5, 6, 7])
+
+[2 3 6]
+
+
+```
+
 
 ## 4.8 Visualización de datos
 ### 4.8.2.2 Scatter plot o gráfico de dispersión
@@ -684,6 +813,27 @@ plt.show()
 
 ```
 ![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/longitudvsanchura.png)
+
+
+```python
+# Definimos los datos
+
+x = iris["sepal_length"]
+y = iris["sepal_width"]
+
+#colores
+species_colors = {'setosa': 'blue', 'versicolor': 'green', 'virginica': 'red'}
+
+
+
+sizes = 100  # Tamaño de los marcadores
+
+plt.figure(figsize=(8,6))
+
+plt.scatter(x, y, s=sizes, alpha=0.3, cmap="hsv")
+```
+
+    METELE IMAGEN 
 
 
 **Ejercicio 2:** Usando la base de datos `penguins` de `seaborn` crea el siguiente gráfico de dispersión.
@@ -1061,3 +1211,4 @@ Tiempo con map: 0.0007224082946777344 segundos
 
 
 >>>>>>> Luis
+>>>>>>> 5740c6c94817a09c5054098b2b482db2dad060e3
