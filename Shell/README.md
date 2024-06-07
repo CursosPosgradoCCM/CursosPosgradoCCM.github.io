@@ -68,10 +68,10 @@ mientras que `'cd ..'` nos direccionara a `/Descargas/Curso_Comp_Cien`.
 
 ![ej_shell](https://github.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/blob/main/Imagenes/ej_shell.png)
 
-- Solución 1: explicación
+- Solución 1: La instrucción solicita listar los archivos que se encuentran en la dirección /Users/backup/ indicando cuales de estos son directorios al imprimir su nombre seguido del símbolo '/' 
 
-```python
-Respuesta
+```bash
+original/ pnas_final/ pnas_sub/
 ```
 
 Escribir resultado
