@@ -65,15 +65,11 @@ mientras que `'cd ..'` nos direccionara a `/Descargas/Curso_Comp_Cien`.
 
 
 **Ejercicio 4** Ejercicio: Supongamos que tenemos el siguiente árbol de datos en nuestra computadora y que estamos en /Users/thing/. ¿Si colocamos en la terminal ls -F ../backup que nos mostrará?
-![ej_shell](/CursosPosgradoCCM.github.io/Imagenes/ej_shell.png)
-
 ![ej_shell](https://github.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/blob/main/Imagenes/ej_shell.png)
 
 - Solución 1: La instrucción solicita listar los archivos que se encuentran en la dirección /Users/backup/ indicando cuales de estos son directorios al imprimir su nombre seguido del símbolo '/' 
 
-```bash
-original/ pnas_final/ pnas_sub/
-```
+`original/ pnas_final/ pnas_sub/`
 
 Escribir resultado
 
