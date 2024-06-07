@@ -67,7 +67,7 @@ mientras que `'cd ..'` nos direccionara a `/Descargas/Curso_Comp_Cien`.
 **Ejercicio 4** Ejercicio: Supongamos que tenemos el siguiente árbol de datos en nuestra computadora y que estamos en /Users/thing/. ¿Si colocamos en la terminal ls -F ../backup que nos mostrará?
 ![ej_shell](https://github.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/blob/main/Imagenes/ej_shell.png)
 
-- Solución 1: La instrucción solicita listar los archivos que se encuentran en la dirección /Users/backup/ indicando cuales de estos son directorios al imprimir su nombre seguido del símbolo '/' 
+- Solución 1 (Mariel): La instrucción solicita listar los archivos que se encuentran en la dirección /Users/backup/ indicando cuales de estos son directorios al imprimir su nombre seguido del símbolo '/' 
 
 `original/ pnas_final/ pnas_sub/`
 
@@ -100,39 +100,30 @@ Untitled.ipynb  Untitled1.ipynb  Untitled2.ipynb
 
 ## 2.2 Manipulación de archivos y directorios
 	
-**Ejercicio 1** ¿Cual es el output de la siguiente colección de comandos?
+**Ejercicio 1** ¿Cuál es el output de la siguiente colección de comandos?
+
+Soluciones (Mariel)
+
 ```output
 1. $ pwd
 ```
+Este comando imprime el directorio de trabajo, es decir, la dirección absoluta del directorio en que se encuentra.
+
 ```output
 2. /Users/haydee/Curso
 ```
+La terminal arroja un error, puesto que esa serie de caracteres no es un comando reconocido por bash.
 
 ```output
 3. $ ls -F
 ```
+La terminal lista los archivos y/o directorios que se encuentran el la ubicación en que se escribió el comando con la especificación de cuales de estos archivos son directorios por medio del nombre del directorio seguido del símbolo '/'.
 
 ```output
 4. archivo.txt carpeta/
 ```
+La terminal arroja un error, puesto que esa serie de caracteres no es un comando reconocido por bash.
 
-Escribir resultado
-
-```output
-Espacio Resultado 1
-```
-
-```output
-Espacio Resultado 2
-```
-
-```output
-Espacio Resultado 3
-```
-
-```output
-Espacio Resultado 4
-```
 
 **Ejercicio 2** Supon que en el directorio data tienes dos archivos. ¿Cuál de los siguientes comandos te daría como resultado: ethane.pdb methane.pdb.
 
@@ -269,14 +260,10 @@ Escribir resultado
 
 **Ejercicio 4** Si quisiéramos ver cuantos animales hay de cada tipo, ¿que instrucción tendríamos que usar?
 
-```python
-Respuesta
-```
+Solución (Mariel)
 
-Escribir resultado
-
-```output
-Espacio Resultado
+```bash
+cat animals.csv | uniq | wc -l
 ```
 
 ## 2.4 Ciclos
@@ -289,7 +276,9 @@ $ for i in {0..9}; do  echo "$i"; done
 ```
 
 
-**Ejercicio 2** Ve a la carpeta shell-lesson-data/exercise-data/alkanes y lista lo que hay. 1) ¿Cuál es el output del siguiente código?
+**Ejercicio 2** Ve a la carpeta shell-lesson-data/exercise-data/alkanes y lista lo que hay. 
+
+1) ¿Cuál es el output del siguiente código?
 
 ```python
 $ for datafile in *.pdb
