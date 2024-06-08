@@ -676,12 +676,18 @@ Escribir resultado
 2012-11-07,rabbit,16
 2012-11-07,bear,1
 ```
-Supongamos que queremos crear un script que tome como primer argumento la especie del animal y como segundo argumento el directorio. El script nos debe regresar un archivo llamado <especie>.txt que contenga una lista de fechas y el número de veces que se observo esa especie. Por ejemplo, rabbit.txt tendría que contener la siguiente información:
+Supongamos que queremos crear un script que tome como primer argumento la especie del animal y como segundo argumento el directorio. El script nos debe regresar un archivo llamado especie.txt que contenga una lista de fechas y el número de veces que se observo esa especie. Por ejemplo, rabbit.txt tendría que contener la siguiente información:
 
 
 ```python
+<<<<<<< HEAD
 Usa las opciones de ayuda de los comandos cut y grep (puedes usar man grep o man cut también para pedir ayuda de esos comandos, la palabra man se refiere a manual.
 ```
+=======
+Usa las opciones de ayuda de los comandos cut y grep (puedes usar man grep o man cut también para pedir ayuda de esos comandos, la palabra man se refiere a manual.)
+```    
+    
+>>>>>>> refs/remotes/origin/main
 ```python
 Respuesta
 ```
@@ -695,6 +701,7 @@ Espacio Resultado
 
 **Ejercicio 3** En la carpeta exercise-data/writing se encuentra el texto completo de Mujercitas LittleWomen.txt. Usando un for encuentra que hermana aparece más veces: Jo, Meg, Beth, Amy.
 
+<<<<<<< HEAD
 Respuesta (Mariel)
 
 Comando
@@ -707,27 +714,70 @@ Comando
 685
 463
 643
+=======
+**soluciones:**
+Francisco:
+```python
+for hermana in "^Jo" "^Meg" "^Beth" "^Amy"; do grep -w -E "$hermana" LittleWomen.txt | wc -l; done
+
+```
+
+```output
+139
+72
+46
+63
+>>>>>>> refs/remotes/origin/main
 ```
 La hermana que más aparece es Jo
 
 **Ejercicio 4**  ¿Cómo podrías mostrar en color lo que estás buscando? Explora la ayuda de grep
 
+<<<<<<< HEAD
 Respuesta (Mariel)
     
 ```bash
 grep --color 'cadena_de_char' <archivo>
+=======
+```python
+grep --help
+```
+
+Ahí encontramos lo siguiente
+
+```output
+grep --color=auto "texto a buscar" archivo
+>>>>>>> refs/remotes/origin/main
 ```
 
 **Ejercicio 5**   La opción -v en grep busca todo lo que no concuerde con el patrón indicado. En la carpeta creatures, ¿cómo listarías todos los archivos que terminen en .dat menos el que se llama unicorn? 
 
+<<<<<<< HEAD
 Respuesta (Mariel)
     `grep -v *unicorn* | ls *.dat`
     
     
+=======
+```python
+find . -type f -name '*.dat' | grep -v './unicorn.dat'
+```
+
+Escribir resultado
+
+```output
+./basilisk.dat
+./minotaur.dat
+./original-basilisk.dat
+./original-minotaur.dat
+./original-unicorn.dat
+
+```
+>>>>>>> refs/remotes/origin/main
 ## 2.7 if, while y for
 
 **Ejercicio 1** Crea un case statement para adivinar tu edad. Debes pedirle al usuario que introduzca el número correspondiente a tu edad y que los casos o patrones obtengan por resultado una frase referente a si adivinaron o no su edad. Realiza lo mismo con un if.
 
+<<<<<<< HEAD
 Respuesta (Mariel)
     
 ```bash
@@ -745,8 +795,57 @@ esac
 
 
 
+=======
+**Soluciones**
+francisco: 
+    
+para case:    con nano hacemos el siguiente script y lo guardamos como edad.sh;
+```python
+
+echo "Adivina mi edad:"
+read edad
+case $edad in
+                26)
+                echo "adivinaste";;
+                *)
+                echo "no le sabes"
+esac
+
+```
+corremos
+    
+````python
+bash edad.sh
+    
+24
+    
+````
+
+```output
+no le sabes
+```
+
+Para if:    con nano hacemos el siguiente script y lo guardamos como ifedad.sh;
+>>>>>>> refs/remotes/origin/main
 
 
+```python
+echo adiviname la edad
+read edad
+if [ $edad == 26 ]; then
+        echo adivinaste
+else
+        echo no le sabes
+fi
+```
+corremos
 
+```python
+bash ifedad.sh
 
+26
+```
+```output
+adivinaste
+```
 

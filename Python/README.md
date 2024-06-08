@@ -814,6 +814,7 @@ plt.show()
 ```
 ![Ejercicio de ASPP Latam](https://raw.githubusercontent.com/CursosPosgradoCCM/CursosPosgradoCCM.github.io/dfbb5aadf6e9f5ff42d4a1545fee93713b47d41f/Imagenes/longitudvsanchura.png)
 
+Francisco
 
 ```python
 # Definimos los datos
@@ -834,7 +835,6 @@ plt.scatter(x, y, s=sizes, alpha=0.3, cmap="hsv")
 ```
 
     METELE IMAGEN 
-
 
 **Ejercicio 2:** Usando la base de datos `penguins` de `seaborn` crea el siguiente gráfico de dispersión.
 
