@@ -8,15 +8,24 @@
 
 **Soluciones:**
 
- - Luis
+ - Mariel
 
 ```sql
-
-
+.schema
 ```
 ```output
-
+CREATE TABLE Person (id text, personal text, family text);
+CREATE TABLE Site (name text, lat real, long real);
+CREATE TABLE Survey (taken integer, person text, quant text, reading real);
+CREATE TABLE Visited (id integer, site text, dated text);
 ```
+Respuesta:
+`Person`
+`Site.name`
+`Survey.person`, `Survey.quant`
+`Visited.site`, `Visited.dated`
+
+
 **Ejercicio 2:** Realiza un query de la columna `name` de lde la tabla `Site`.
 
 **Soluciones:**
