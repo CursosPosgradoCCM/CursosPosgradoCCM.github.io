@@ -20,9 +20,13 @@ CREATE TABLE Survey (taken integer, person text, quant text, reading real);
 CREATE TABLE Visited (id integer, site text, dated text);
 ```
 Respuesta:
+
 `Person`
+
 `Site.name`
+
 `Survey.person`, `Survey.quant`
+
 `Visited.site`, `Visited.dated`
 
 
