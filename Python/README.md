@@ -1157,13 +1157,19 @@ def test_longitud_lista():
 
 
 **Ejercicio 2:** Crea un archivo nuevo para hacer test llamado `test_prueba`. Realiza una función prueba que verifique que `1+2` es `3`. Realiza el test. Ahora prueba con `1.1+2.2` es `3.3`, usa pytest.
+**Soluciones:**
+
+
 ```python
 
-
+def suma(a,b):
+    return a+b
+def test_sumar_positivos():
+    #veririficar suma de positivos
+    resultado= suma(1,2)
+    assert resultado== 3, f"la suma deberia ser 3 pero paila {resultado}"
 ```
-```output
 
-```
 
 ### 4.14 Programación en paralelo
 

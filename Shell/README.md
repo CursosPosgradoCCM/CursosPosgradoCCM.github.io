@@ -680,14 +680,13 @@ Supongamos que queremos crear un script que tome como primer argumento la especi
 
 
 ```python
-<<<<<<< HEAD
+
 Usa las opciones de ayuda de los comandos cut y grep (puedes usar man grep o man cut también para pedir ayuda de esos comandos, la palabra man se refiere a manual.
 ```
-=======
+
 Usa las opciones de ayuda de los comandos cut y grep (puedes usar man grep o man cut también para pedir ayuda de esos comandos, la palabra man se refiere a manual.)
 ```    
-    
->>>>>>> refs/remotes/origin/main
+
 ```python
 Respuesta
 ```
@@ -701,7 +700,7 @@ Espacio Resultado
 
 **Ejercicio 3** En la carpeta exercise-data/writing se encuentra el texto completo de Mujercitas LittleWomen.txt. Usando un for encuentra que hermana aparece más veces: Jo, Meg, Beth, Amy.
 
-<<<<<<< HEAD
+
 Respuesta (Mariel)
 
 Comando
@@ -714,7 +713,7 @@ Comando
 685
 463
 643
-=======
+
 **soluciones:**
 Francisco:
 ```python
@@ -727,18 +726,18 @@ for hermana in "^Jo" "^Meg" "^Beth" "^Amy"; do grep -w -E "$hermana" LittleWomen
 72
 46
 63
->>>>>>> refs/remotes/origin/main
+
 ```
 La hermana que más aparece es Jo
 
 **Ejercicio 4**  ¿Cómo podrías mostrar en color lo que estás buscando? Explora la ayuda de grep
 
-<<<<<<< HEAD
+
 Respuesta (Mariel)
     
 ```bash
 grep --color 'cadena_de_char' <archivo>
-=======
+
 ```python
 grep --help
 ```
@@ -752,12 +751,12 @@ grep --color=auto "texto a buscar" archivo
 
 **Ejercicio 5**   La opción -v en grep busca todo lo que no concuerde con el patrón indicado. En la carpeta creatures, ¿cómo listarías todos los archivos que terminen en .dat menos el que se llama unicorn? 
 
-<<<<<<< HEAD
+
 Respuesta (Mariel)
     `grep -v *unicorn* | ls *.dat`
     
     
-=======
+
 ```python
 find . -type f -name '*.dat' | grep -v './unicorn.dat'
 ```
@@ -772,12 +771,11 @@ Escribir resultado
 ./original-unicorn.dat
 
 ```
->>>>>>> refs/remotes/origin/main
+
 ## 2.7 if, while y for
 
 **Ejercicio 1** Crea un case statement para adivinar tu edad. Debes pedirle al usuario que introduzca el número correspondiente a tu edad y que los casos o patrones obtengan por resultado una frase referente a si adivinaron o no su edad. Realiza lo mismo con un if.
 
-<<<<<<< HEAD
 Respuesta (Mariel)
     
 ```bash
@@ -795,9 +793,8 @@ esac
 
 
 
-=======
 **Soluciones**
-francisco: 
+Francisco: 
     
 para case:    con nano hacemos el siguiente script y lo guardamos como edad.sh;
 ```python
@@ -826,8 +823,6 @@ no le sabes
 ```
 
 Para if:    con nano hacemos el siguiente script y lo guardamos como ifedad.sh;
->>>>>>> refs/remotes/origin/main
-
 
 ```python
 echo adiviname la edad
